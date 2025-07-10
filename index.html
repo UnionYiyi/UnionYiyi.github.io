@@ -25,48 +25,52 @@
       font-weight: bold;
     }
     .hero {
-      padding: 100px 40px;
+      padding: 100px 20px 60px;
       text-align: center;
-      background-color: #fdfaf5;
+      background-color: #fffdf9;
+      max-width: 900px;
+      margin: 0 auto;
     }
     .hero h1 {
       font-size: 3em;
       color: #5b4b3a;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .hero p {
-      font-size: 1.3em;
-      margin-bottom: 30px;
+      font-size: 1.2em;
       color: #7e6b53;
-    }
-    .hero a.button {
-      display: inline-block;
-      padding: 12px 30px;
-      background-color: #6c584c;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+      line-height: 1.8em;
+      margin-bottom: 2em;
     }
     .sections {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 60px 40px;
-      background-color: #fffdf9;
+      justify-content: center;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     .section {
       width: 300px;
-      margin: 20px;
       text-align: center;
     }
     .section img {
-      max-width: 100%;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 6px;
+      margin-bottom: 15px;
     }
-    .section h2 {
+    .section h3 {
       color: #5b4b3a;
-      margin-top: 15px;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    .section p {
+      color: #7e6b53;
+      font-size: 0.95em;
+      line-height: 1.6em;
     }
     footer {
       text-align: center;
@@ -74,6 +78,7 @@
       background-color: #f4f0ec;
       font-size: 0.9em;
       color: #999;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -82,6 +87,7 @@
   <header>
     <div style="font-size: 1.5em; font-weight: bold;">UnionYiyi</div>
     <nav>
+      <a href="index.html">Home</a>
       <a href="cotton.html">Cotton</a>
       <a href="linen.html">Linen</a>
       <a href="silk.html">Silk</a>
@@ -92,26 +98,25 @@
   </header>
 
   <div class="hero">
-    <h1>Welcome to UnionYiyi</h1>
-    <p>Softness is power. Purity is timeless.</p>
-    <a href="collections.html" class="button">Explore Collections</a>
+    <h1>Rest your soul.</h1>
+    <p>In cotton clouds, linen breeze, and silk light — comfort made in China.</p>
   </div>
 
   <div class="sections">
     <div class="section">
-      <img src="images/cotton-cover.jpg" alt="Cotton"/>
-      <h2>Cloud-like Cotton</h2>
-      <p>Born from Chinese fields. Familiar, soft, deeply comforting.</p>
+      <a href="cotton.html"><img src="images/cotton1.jpg" alt="Cotton"></a>
+      <h3>Cotton</h3>
+      <p>Soft like a cloud, familiar as a memory. Breathable, bouncy, born from Chinese cotton fields.</p>
     </div>
     <div class="section">
-      <img src="images/linen-cover.jpg" alt="Linen"/>
-      <h2>Free-flowing Linen</h2>
-      <p>Breathes with you. Wild, independent, made for expression.</p>
+      <a href="linen.html"><img src="images/linen1.jpg" alt="Linen"></a>
+      <h3>Linen</h3>
+      <p>Cool, crisp, and grounding. Like walking barefoot in the wind, light against your skin.</p>
     </div>
     <div class="section">
-      <img src="images/silk-cover.jpg" alt="Silk"/>
-      <h2>Soulful Silk</h2>
-      <p>Light, flowing, sensual. A whisper of elegance every night.</p>
+      <a href="silk.html"><img src="images/silk1.jpg" alt="Silk"></a>
+      <h3>Silk</h3>
+      <p>Delicate but fierce. A touch of drama, a lot of love — the kind that lingers.</p>
     </div>
   </div>
 

@@ -43,33 +43,32 @@
       margin-bottom: 2em;
     }
     .sections {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+      background: #fff;
     }
-    .section {
-      width: 300px;
-      text-align: center;
+    .section a {
+      text-decoration: none;
+      color: inherit;
     }
     .section img {
       width: 100%;
-      height: 200px;
+      height: 300px;
       object-fit: cover;
-      border-radius: 6px;
-      margin-bottom: 15px;
+      display: block;
+      margin-bottom: 10px;
+      border-radius: 8px;
     }
     .section h3 {
+      font-size: 1.3em;
       color: #5b4b3a;
-      font-size: 1.2em;
-      margin-bottom: 10px;
+      margin: 10px 0 5px;
     }
     .section p {
+      font-size: 1em;
       color: #7e6b53;
-      font-size: 0.95em;
       line-height: 1.6em;
     }
     footer {
@@ -104,19 +103,25 @@
 
   <div class="sections">
     <div class="section">
-      <a href="cotton.html"><img src="images/cotton1.jpg" alt="Cotton"></a>
-      <h3>Cotton</h3>
-      <p>Soft like a cloud, familiar as a memory. Breathable, bouncy, born from Chinese cotton fields.</p>
+      <a href="cotton.html">
+        <img src="images/cotton1.jpg" alt="Cotton">
+        <h3>Cotton</h3>
+        <p>Soft like a cloud, familiar as a memory. Breathable, bouncy, born from Chinese cotton fields.</p>
+      </a>
     </div>
     <div class="section">
-      <a href="linen.html"><img src="images/linen1.jpg" alt="Linen"></a>
-      <h3>Linen</h3>
-      <p>Cool, crisp, and grounding. Like walking barefoot in the wind, light against your skin.</p>
+      <a href="linen.html">
+        <img src="images/linen1.jpg" alt="Linen">
+        <h3>Linen</h3>
+        <p>Cool, crisp, and grounding. Like walking barefoot in the wind, light against your skin.</p>
+      </a>
     </div>
     <div class="section">
-      <a href="silk.html"><img src="images/silk1.jpg" alt="Silk"></a>
-      <h3>Silk</h3>
-      <p>Delicate but fierce. A touch of drama, a lot of love — the kind that lingers.</p>
+      <a href="silk.html">
+        <img src="images/silk1.jpg" alt="Silk">
+        <h3>Silk</h3>
+        <p>Delicate but fierce. A touch of drama, a lot of love — the kind that lingers.</p>
+      </a>
     </div>
   </div>
 

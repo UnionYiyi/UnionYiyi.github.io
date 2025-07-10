@@ -28,7 +28,7 @@
       padding: 80px 20px 40px;
       text-align: center;
       background-color: #fffdf9;
-      max-width: 960px;
+      max-width: 1000px;
       margin: 0 auto;
     }
     .hero h1 {
@@ -42,20 +42,24 @@
       line-height: 1.8em;
       margin-bottom: 1.5em;
     }
+
     .gallery {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
+
     .gallery img {
-      width: 300px;
-      margin: 15px;
-      border-radius: 8px;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 6px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.06);
     }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -63,6 +67,19 @@
       font-size: 0.9em;
       color: #999;
     }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -90,6 +107,9 @@
     <img src="images/cotton1.jpg" alt="Cotton Fabric 1">
     <img src="images/cotton2.jpg" alt="Cotton Fabric 2">
     <img src="images/cotton3.jpg" alt="Cotton Fabric 3">
+    <img src="images/cotton4.jpg" alt="Cotton Fabric 4">
+    <img src="images/cotton5.jpg" alt="Cotton Fabric 5">
+    <img src="images/cotton6.jpg" alt="Cotton Fabric 6">
   </div>
 
   <footer>

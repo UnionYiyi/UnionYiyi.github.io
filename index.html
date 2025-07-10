@@ -3,110 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UnionYiyi | Rest your soul</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>UnionYiyi</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Georgia', serif;
-      background-color: #fdfdfd;
+      background-color: #fefcf8;
       color: #333;
+      padding-top: 80px;
     }
 
     header {
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px 40px;
+      background-color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 16px 32px;
       position: fixed;
-      top: 0;
       width: 100%;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      top: 0;
+      left: 0;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 20px;
+      font-weight: 500;
     }
 
     nav a {
-      margin-left: 25px;
+      margin-left: 24px;
       text-decoration: none;
-      color: #6c584c;
-      font-weight: bold;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .hero {
-      background: url('images/cotton.jpg') center center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      color: white;
-      padding: 0 20px;
+      padding: 80px 20px 40px;
     }
 
-    .hero h1 {
-      font-size: 4em;
-      margin: 0;
-      letter-spacing: 1px;
-    }
-
-    .hero p {
-      font-size: 1.3em;
-      margin-top: 20px;
-      max-width: 700px;
-    }
-
-    .section {
-      max-width: 1000px;
-      margin: 80px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 16px;
       color: #5b4b3a;
     }
 
-    .section p {
-      font-size: 1.1em;
-      line-height: 1.6;
+    .hero p {
+      font-size: 18px;
       color: #666;
     }
 
-    footer {
+    .grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 60px;
+    }
+
+    .grid-item {
+      flex: 1 1 300px;
+      max-width: 400px;
       text-align: center;
-      padding: 30px;
-      color: #aaa;
-      font-size: 0.9em;
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .grid-item img:hover {
+      transform: scale(1.02);
+    }
+
+    .grid-item p {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        margin-left: 12px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">UnionYiyi</div>
+    <h1>UnionYiyi</h1>
     <nav>
-      <a href="about.html">About</a>
-      <a href="materials.html">Materials</a>
-      <a href="brand-philosophy.html">Philosophy</a>
+      <a href="cotton.html">Cotton</a>
+      <a href="linen.html">Linen</a>
+      <a href="silk.html">Silk</a>
+      <a href="collections.html">Collections</a>
+      <a href="brand-philosophy.html">Our Philosophy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Rest your soul</h1>
+  <div class="hero">
+    <h2>Rest your soul</h2>
     <p>Nature-inspired bedding made from the finest cotton, linen, and silk — crafted for comfort and calm.</p>
-  </section>
+  </div>
 
-  <section class="section">
-    <h2>Our Mission</h2>
-    <p>We believe that good sleep is more than rest — it’s a return to the essence. Our fabrics breathe with you, creating a quiet space where your body and soul feel at peace.</p>
-  </section>
-
-  <footer>
-    © 2025 UnionYiyi Co., Ltd. All rights reserved.
-  </footer>
+  <div class="grid">
+    <div class="grid-item">
+      <a href="cotton.html">
+        <img src="images/cotton.jpg" alt="Cotton">
+        <p>Cotton</p>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="linen.html">
+        <img src="images/linen.jpg" alt="Linen">
+        <p>Linen</p>
+      </a>
+    </div>
+    <div class="grid-item">
+      <a href="silk.html">
+        <img src="images/silk.jpg" alt="Silk">
+        <p>Silk</p>
+      </a>
+    </div>
+  </div>
 </body>
 </html>

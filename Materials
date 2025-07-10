@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Materials | UnionYiyi</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background: #fdfbf9;
+      color: #2f2f2f;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #6c584c;
+    }
+    .material {
+      margin-top: 30px;
+      background: #f0ece8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .material h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .material p {
+      line-height: 1.6em;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #7e6b53;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fabric Philosophy</h1>
+
+  <div class="material">
+    <h2>Silk</h2>
+    <p>Luminous, luxurious, and born of the legendary Silk Road. Soft like moonlight, breathable like the breeze. We use only the finest mulberry silk — OEKO-TEX certified and handcrafted for healing sleep.</p>
+  </div>
+
+  <div class="material">
+    <h2>Cotton</h2>
+    <p>Pure, resilient, and grown in heritage Chinese cotton fields. Our combed cotton is spun for softness and strength, suitable for every season. A familiar embrace you return to, again and again.</p>
+  </div>
+
+  <div class="material">
+    <h2>Linen</h2>
+    <p>Raw, grounding, and beautifully irregular. Washed European flax linen that cools in summer, warms in winter, and softens with time. Designed for the poetic soul who loves life unfiltered.</p>
+  </div>
+
+  <a href="index.html">← Back to Home</a>
+  <footer>
+    &copy; 2025 UnionYiyi. All rights reserved.
+  </footer>
+</body>
+</html>

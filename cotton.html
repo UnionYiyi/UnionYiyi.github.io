@@ -4,12 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cotton | UnionYiyi</title>
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fefcf8;
+      color: #2f2f2f;
+    }
+    header {
+      background-color: #f4f0ec;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #6c584c;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 80px 20px 40px;
+      text-align: center;
+      background-color: #fffdf9;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.8em;
+      color: #5b4b3a;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #7e6b53;
+      line-height: 1.8em;
+      margin-bottom: 1.5em;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f4f0ec;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">UnionYiyi</div>
+    <div style="font-size: 1.5em; font-weight: bold;">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="cotton.html">Cotton</a>
@@ -21,20 +97,20 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <div class="hero">
     <h1>Cloud-like Cotton</h1>
     <p>Born from the cotton fields of China, we choose only the gentlest touch. Bouncy, breathable, never too slippery or stiff — like sleeping inside a cloud.</p>
     <p>We don’t choose cotton for luxury, but for memory. For the way it hugs, folds, and breathes — like a grandmother’s quilt, or a safe Sunday morning.</p>
-  </section>
+  </div>
 
-  <section class="gallery">
+  <div class="gallery">
     <img src="images/cotton1.jpg" alt="Cotton Fabric 1">
     <img src="images/cotton2.jpg" alt="Cotton Fabric 2">
     <img src="images/cotton3.jpg" alt="Cotton Fabric 3">
     <img src="images/cotton4.jpg" alt="Cotton Fabric 4">
     <img src="images/cotton5.jpg" alt="Cotton Fabric 5">
     <img src="images/cotton6.jpg" alt="Cotton Fabric 6">
-  </section>
+  </div>
 
   <footer>
     &copy; 2025 UnionYiyi. All rights reserved.

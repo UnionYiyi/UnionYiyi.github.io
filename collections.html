@@ -6,66 +6,79 @@
   <title>Collections | UnionYiyi</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .intro {
-      text-align: center;
-      padding: 80px 20px 40px;
-      background-color: #fffdf9;
-      max-width: 1000px;
-      margin: 0 auto;
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fefcf8;
+      color: #2f2f2f;
     }
-    .intro h1 {
+    header {
+      background-color: #f4f0ec;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #6c584c;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 60px 20px 30px;
+      background-color: #fffdf9;
+    }
+    .hero h1 {
       font-size: 2.8em;
       color: #5b4b3a;
-      text-align: center;
       margin-bottom: 20px;
     }
-    .intro p {
-      font-size: 1.2em;
-      color: #7e6b53;
-      line-height: 1.8em;
-    }
-
-    .collection-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
-      padding: 60px 20px;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-
-    .collection-card {
-      background-color: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      overflow: hidden;
-      max-width: 340px;
+    .collection-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      transition: transform 0.3s ease;
     }
-
-    .collection-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .collection-card img {
+    .collection-item img {
       width: 100%;
-      height: 240px;
+      height: 320px;
       object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
     }
-
-    .collection-card h3 {
-      margin: 20px 0 10px;
-      color: #5b4b3a;
+    .collection-item h2 {
       font-size: 1.4em;
+      color: #5b4b3a;
+      margin: 10px 0 8px;
     }
-
-    .collection-card p {
-      color: #7e6b53;
+    .collection-item p {
       font-size: 1em;
-      padding: 0 20px 20px;
+      color: #7e6b53;
       line-height: 1.6em;
+      padding: 0 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f4f0ec;
+      font-size: 0.9em;
+      color: #999;
+    }
+    @media (max-width: 800px) {
+      .collections {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -84,28 +97,43 @@
     </nav>
   </header>
 
-  <section class="intro">
-    <h1>Explore Our Collections</h1>
-    <p>Every thread tells a story. From everyday elegance to timeless tradition, our collections reflect the beauty we believe in.</p>
-  </section>
+  <div class="hero">
+    <h1>Our Collections</h1>
+    <p>Each design speaks softly. No shouting logos. Just textile, soul, and story.</p>
+  </div>
 
-  <section class="collection-section">
-    <div class="collection-card">
-      <img src="images/collection1.jpg" alt="Modern Simplicity">
-      <h3>Modern Simplicity</h3>
-      <p>Clean lines, muted tones — a calming touch for the modern home. Minimalist, but full of feeling.</p>
+  <div class="collections">
+    <div class="collection-item">
+      <img src="images/collection1.jpg" alt="Classic Whites">
+      <h2>Classic Whites</h2>
+      <p>Timeless, soft, serene. Our all-white bedding sets embrace peace and simplicity.</p>
     </div>
-    <div class="collection-card">
-      <img src="images/collection2.jpg" alt="Nature-Inspired">
-      <h3>Nature-Inspired</h3>
-      <p>Earthy palettes and organic textures. Feel the quiet echo of mountains, rain, and rice fields in every weave.</p>
+    <div class="collection-item">
+      <img src="images/collection2.jpg" alt="Nature Inspired">
+      <h2>Nature Inspired</h2>
+      <p>Earth tones and natural patterns — like sleeping beside a stream under the trees.</p>
     </div>
-    <div class="collection-card">
-      <img src="images/collection3.jpg" alt="Timeless Romance">
-      <h3>Timeless Romance</h3>
-      <p>Soft lace, warm ivory, a whisper of nostalgia — for those who love with memory and meaning.</p>
+    <div class="collection-item">
+      <img src="images/collection3.jpg" alt="Loomed Traditions">
+      <h2>Loomed Traditions</h2>
+      <p>Reviving ancient weaving styles and heritage motifs into everyday modern use.</p>
     </div>
-  </section>
+    <div class="collection-item">
+      <img src="images/collection4.jpg" alt="Bare Luxury">
+      <h2>Bare Luxury</h2>
+      <p>No glitz, no sheen — just texture, breathability, and comfort in every thread.</p>
+    </div>
+    <div class="collection-item">
+      <img src="images/collection5.jpg" alt="Soft Geometry">
+      <h2>Soft Geometry</h2>
+      <p>Clean lines meet comfort. Balanced compositions made for minimalist hearts.</p>
+    </div>
+    <div class="collection-item">
+      <img src="images/collection6.jpg" alt="Quiet Romance">
+      <h2>Quiet Romance</h2>
+      <p>Faint florals, dusky tones, a gentle embrace. A soft whisper of sweetness.</p>
+    </div>
+  </div>
 
   <footer>
     &copy; 2025 UnionYiyi. All rights reserved.

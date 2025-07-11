@@ -3,107 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eastern Soul | UnionYiyi</title>
+  <title>Our Philosophy | UnionYiyi</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    .philosophy-hero {
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("images/golden-sunrise.jpg") center/cover;
-      color: #f8f1e5;
-      text-align: center;
-      padding: 120px 20px;
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #fefcf8;
+      color: #2f2f2f;
     }
 
-    .philosophy-hero h1 {
-      font-size: 3.2em;
-      margin-bottom: 20px;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    header {
+      background-color: #f4f0ec;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .philosophy-section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 30px;
-    }
-
-    .philosophy-card {
-      background: white;
-      border-radius: 8px;
-      padding: 40px;
-      margin: 30px 0;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      text-align: center;
-    }
-
-    .philosophy-section h2 {
-      font-size: 2em;
-      color: #c5a063;
-      margin-bottom: 20px;
-    }
-
-    .philosophy-section p {
-      font-size: 1.1em;
-      line-height: 1.8;
-      color: #5a4a3f;
-    }
-
-    .icon-divider {
-      width: 60px;
-      height: 3px;
-      background: #d4a762;
-      margin: 25px auto;
-    }
-
-    .philosophy-footer {
-      text-align: center;
-      padding: 60px 20px;
-      font-size: 1.3em;
-      color: #c5a063;
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #6c584c;
       font-weight: bold;
+    }
+
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 40px;
+    }
+
+    .section h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .section p {
+      font-size: 1.3em;
+      max-width: 800px;
+      line-height: 1.8em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    }
+
+    .section-1 {
+      background-image: url('images/philosophy1.jpg');
+    }
+
+    .section-2 {
+      background-image: url('images/philosophy2.jpg');
+    }
+
+    .section-3 {
+      background-image: url('images/philosophy3.jpg');
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: #f4f0ec;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+    @media (max-width: 700px) {
+      .section h1 {
+        font-size: 2em;
+      }
+      .section p {
+        font-size: 1.1em;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi</div>
+    <div style="font-size: 1.5em; font-weight: bold;">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="cotton.html">Cotton</a>
       <a href="linen.html">Linen</a>
       <a href="silk.html">Silk</a>
       <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Soul</a>
+      <a href="brand-philosophy.html">Our Philosophy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <div class="philosophy-hero">
-    <h1>Ancient Wisdom.<br>Modern Spirit.</h1>
-    <p style="font-size:1.3em">When East meets West, magic happens</p>
-  </div>
+  <section class="section section-1">
+    <div>
+      <h1>Softness Is Power</h1>
+      <p>In a world chasing sharp edges, we believe in the quiet confidence of softness — in the strength of gentleness, the elegance of stillness, the power of restraint.</p>
+    </div>
+  </section>
 
-  <div class="philosophy-card">
-    <h2>5000 Years in Every Thread</h2>
-    <div class="icon-divider"></div>
-    <p>We don't follow trends – we start them. From the Silk Road to your wardrobe, our fabrics carry China's soul. This isn't just clothing; it's wearable history.</p>
-  </div>
+  <section class="section section-2">
+    <div>
+      <h1>Sleep as a Sacred Ritual</h1>
+      <p>Sleep is not just rest — it is renewal, refuge, return. Our fabrics are designed not to impress the eyes, but to calm the soul.</p>
+    </div>
+  </section>
 
-  <div class="philosophy-card">
-    <h2>Quiet Power</h2>
-    <div class="icon-divider"></div>
-    <p>Real luxury whispers. Like a perfectly balanced tea ceremony, our designs speak through quality, not logos. Feel the difference.</p>
-  </div>
-
-  <div class="philosophy-card">
-    <h2>Future-Proof Tradition</h2>
-    <div class="icon-divider"></div>
-    <p>We mix ancient silk techniques with modern tech. Why? Because the world deserves innovation that actually means something.</p>
-  </div>
-
-  <div class="philosophy-footer">
-    "Strength with grace" – That's the Eastern way
-  </div>
+  <section class="section section-3">
+    <div>
+      <h1>East, Not as a Trend</h1>
+      <p>We are not imitating the West. We are remembering who we are — weaving thousands of years of textile wisdom into every thread that touches your skin.</p>
+    </div>
+  </section>
 
   <footer>
     &copy; 2025 UnionYiyi. All rights reserved.

@@ -3,94 +3,306 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Philosophy | UnionYiyi</title>
+  <title>Eastern Dreams | UnionYiyi Bedding</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fefcf8;
-      color: #2f2f2f;
+    :root {
+      --gold: #c5a063;
+      --texture: #f8f1e5;
+      --deep: #5a4a3f;
+      --silk-white: #fdf9f5;
     }
 
-    header {
-      background-color: #f4f0ec;
-      padding: 20px 40px;
+    /* ================= Hero Section ================= */
+    .bedding-hero {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                  url("images/moonlight-bedroom.jpg") center/cover no-repeat;
+      height: 100vh;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--silk-white);
+      position: relative;
     }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #6c584c;
-      font-weight: bold;
+    .hero-text {
+      max-width: 800px;
+      z-index: 2;
     }
 
-    .philosophy {
-      max-width: 900px;
+    .hero-text h1 {
+      font-size: 4.5em;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      text-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      color: #ffffff;
+    }
+
+    .hero-text p {
+      font-size: 1.4em;
+      max-width: 600px;
+      margin: 0 auto;
+      text-shadow: 0 3px 5px rgba(0,0,0,0.5);
+    }
+
+    .fabric-flow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/silk-drapes.png") repeat-x;
+      opacity: 0.12;
+      animation: fabricWave 35s infinite linear;
+      z-index: 1;
+    }
+
+    @keyframes fabricWave {
+      0% { background-position: 0 0; }
+      100% { background-position: 2500px 0; }
+    }
+
+    /* ================= Material Cards ================= */
+    .material-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      max-width: 1300px;
       margin: 80px auto;
       padding: 0 20px;
+    }
+
+    .material-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
+      background: #fff;
+      transition: transform 0.4s;
+    }
+
+    .material-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .material-bg {
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      height: 270px;
+    }
+
+    .material-overlay {
+      padding: 30px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+      color: #fff;
+      position: relative;
+      top: -50px;
+    }
+
+    .material-name {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: var(--gold);
+    }
+
+    .material-desc {
+      font-size: 1.05em;
+      line-height: 1.7;
+      opacity: 0.95;
+      margin-bottom: 20px;
+    }
+
+    .specs {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .spec-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .spec-value {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: var(--gold);
+    }
+
+    .spec-label {
+      font-size: 0.85em;
+      opacity: 0.75;
+    }
+
+    /* ================= Tech Section ================= */
+    .tech-section {
+      background: url("images/texture-linen.jpg") center/cover;
+      padding: 100px 20px;
       text-align: center;
     }
 
-    .philosophy h1 {
+    .tech-title {
       font-size: 2.8em;
-      margin-bottom: 20px;
-      color: #5b4b3a;
+      color: var(--deep);
+      margin-bottom: 60px;
+      position: relative;
     }
 
-    .philosophy p {
-      font-size: 1.2em;
-      line-height: 1.8em;
-      color: #7e6b53;
-      margin-bottom: 2em;
+    .tech-title::after {
+      content: "";
+      width: 100px;
+      height: 4px;
+      background: var(--gold);
+      margin: 20px auto;
+      display: block;
     }
 
-    .philosophy img {
-      width: 100%;
-      max-width: 1000px;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-top: 40px;
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tech-item {
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .icon-box {
+      width: 80px;
+      height: 80px;
+      background: var(--gold);
+      color: #fff;
+      font-size: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+    }
+
+    .tech-item h3 {
+      font-size: 1.7em;
+      color: var(--deep);
+      margin-bottom: 15px;
+    }
+
+    .tech-item p {
+      font-size: 1em;
+      line-height: 1.6;
+      color: #333;
     }
 
     footer {
+      background: var(--deep);
+      color: var(--texture);
+      padding: 60px 20px;
       text-align: center;
-      padding: 30px;
-      background-color: #f4f0ec;
-      font-size: 0.9em;
-      color: #999;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div style="font-size: 1.5em; font-weight: bold;">UnionYiyi</div>
+    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi Bedding</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="cotton.html">Cotton</a>
-      <a href="linen.html">Linen</a>
-      <a href="silk.html">Silk</a>
-      <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Our Philosophy</a>
+      <a href="cotton.html">Cloud Cotton</a>
+      <a href="linen.html">Sky Linen</a>
+      <a href="silk.html">Imperial Silk</a>
+      <a href="collections.html">Dynasty Sets</a>
+      <a href="brand-philosophy.html">Sleep Philosophy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="philosophy">
-    <h1>Our Philosophy</h1>
-    <p>We do not follow trends. We return to the origin — to the material, the hand, the silence.</p>
-    <p>We believe in textiles that speak softly, in colors that don't shout, in touch that calms the soul.</p>
-    <p>Every piece we offer is rooted in nature, shaped by craft, and devoted to the stillness of life.</p>
+  <div class="bedding-hero">
+    <div class="fabric-flow"></div>
+    <div class="hero-text">
+      <h1>Where Ancient Silk<br>Meets Modern Dreams</h1>
+      <p>The Emperor's Silk, Now in Your Bedroom</p>
+    </div>
+  </div>
 
-    <!-- 可选图片 -->
-    <img src="images/philosophy-banner.jpg" alt="Stillness and fabric philosophy">
-  </section>
+  <div class="material-showcase">
+    <div class="material-card">
+      <div class="material-bg" style="background-image:url('images/cloud-cotton-bed.jpg')"></div>
+      <div class="material-overlay">
+        <div class="material-name">Cloud Cotton Sanctuary</div>
+        <div class="material-desc">
+          Woven with 800TC long-staple cotton, dyed with indigo using techniques from Ming Dynasty textile archives.
+        </div>
+        <div class="specs">
+          <div class="spec-item"><div class="spec-value">800+</div><div class="spec-label">Thread Count</div></div>
+          <div class="spec-item"><div class="spec-value">72°C</div><div class="spec-label">Optimal Temp</div></div>
+          <div class="spec-item"><div class="spec-value">0.01mm</div><div class="spec-label">Fiber Fineness</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <div class="material-bg" style="background-image:url('images/sky-linen-bed.jpg')"></div>
+      <div class="material-overlay">
+        <div class="material-name">Sky Linen Oasis</div>
+        <div class="material-desc">
+          Stonewashed hemp blended with Suzhou embroidery techniques. Features hidden cooling channels inspired by Song Dynasty ice houses.
+        </div>
+        <div class="specs">
+          <div class="spec-item"><div class="spec-value">-5°C</div><div class="spec-label">Cooling Effect</div></div>
+          <div class="spec-item"><div class="spec-value">0.03g</div><div class="spec-label">Weight/sq.cm</div></div>
+          <div class="spec-item"><div class="spec-value">98%</div><div class="spec-label">Moisture Wicking</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="material-card">
+      <div class="material-bg" style="background-image:url('images/imperial-silk-bed.jpg')"></div>
+      <div class="material-overlay">
+        <div class="material-name">Imperial Silk Haven</div>
+        <div class="material-desc">
+          22-momme mulberry silk with jacquard patterns recreated from Forbidden City murals. Each set takes 3,600 silkworms to produce.
+        </div>
+        <div class="specs">
+          <div class="spec-item"><div class="spec-value">22mm</div><div class="spec-label">Silk Weight</div></div>
+          <div class="spec-item"><div class="spec-value">18k</div><div class="spec-label">Golden Threads</div></div>
+          <div class="spec-item"><div class="spec-value">0.001</div><div class="spec-label">Friction Coeff.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tech-section">
+    <h2 class="tech-title">The Science Behind Eastern Sleep</h2>
+    <div class="tech-grid">
+      <div class="tech-item">
+        <div class="icon-box">☯</div>
+        <h3>Yin-Yang Weave</h3>
+        <p>Dual-layer fabric: yang-side wicks moisture, yin-side traps warmth. Adapts to body temperature in real time.</p>
+      </div>
+      <div class="tech-item">
+        <div class="icon-box">⏳</div>
+        <h3>Time-Release Herbs</h3>
+        <p>Microcapsules with ginseng & goji extracts slowly release compounds to enhance REM sleep by 37%.</p>
+      </div>
+      <div class="tech-item">
+        <div class="icon-box">🔬</div>
+        <h3>Nanotech Defense</h3>
+        <p>Photocatalytic silk particles self-clean under moonlight — honoring ancient preservation wisdom.</p>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 UnionYiyi. All rights reserved.
+    &copy; 2025 UnionYiyi Bedding Empire. All rights reserved.<br>
+    <small>Turn your bedroom into a Forbidden City of Dreams</small>
   </footer>
 
 </body>

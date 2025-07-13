@@ -10,16 +10,19 @@
     .dropdown:hover .dropdown-menu {
       display: block;
     }
+    .dropdown-menu a {
+      white-space: nowrap;
+    }
   </style>
 </head>
-<body class="bg-white text-gray-800">
-  <header class="p-4 border-b flex justify-between items-center">
-    <h1 class="text-xl font-bold tracking-wide">UnionYiyi</h1>
+<body class="bg-white text-gray-900">
+  <header class="px-6 py-4 border-b flex justify-between items-center bg-white max-w-7xl mx-auto">
+    <h1 class="text-2xl font-bold tracking-wide">UnionYiyi</h1>
     <nav class="flex space-x-6 text-sm">
-      <a href="/index.html">Home</a>
+      <a href="/index.html" class="hover:text-gray-600">Home</a>
       <div class="relative dropdown">
-        <a href="/cotton.html" class="hover:underline">Cotton</a>
-        <div class="absolute hidden dropdown-menu bg-white shadow rounded mt-2 z-10 text-left">
+        <a href="/cotton.html" class="hover:text-gray-600">Cotton</a>
+        <div class="absolute hidden dropdown-menu bg-white shadow rounded mt-2 z-10 text-left min-w-max">
           <ul class="text-sm p-2 space-y-1">
             <li><a href="#duvet" class="block px-4 py-2 hover:bg-gray-100">Duvet Covers</a></li>
             <li><a href="#quilt" class="block px-4 py-2 hover:bg-gray-100">Quilt Covers</a></li>
@@ -27,54 +30,92 @@
           </ul>
         </div>
       </div>
-      <a href="/linen.html">Linen</a>
-      <a href="/silk.html">Silk</a>
-      <a href="/collections.html">Collections</a>
-      <a href="/philosophy.html">Our Philosophy</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/linen.html" class="hover:text-gray-600">Linen</a>
+      <a href="/silk.html" class="hover:text-gray-600">Silk</a>
+      <a href="/collections.html" class="hover:text-gray-600">Collections</a>
+      <a href="/philosophy.html" class="hover:text-gray-600">Our Philosophy</a>
+      <a href="/contact.html" class="hover:text-gray-600">Contact</a>
     </nav>
   </header>
 
-  <section class="p-6 text-center">
-    <h2 class="text-3xl font-semibold mb-2">Cloud-like Cotton</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto">
-      Born from the cotton fields of China, we choose only the gentlest touch. Bouncy, breathable, never too slippery or stiff — like sleeping inside a cloud.
-    </p>
-    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
-      We don’t choose cotton for luxury, but for memory. For the way it hugs, folds, and breathes — like a grandmother’s quilt, or a safe Sunday morning.
-    </p>
-  </section>
+  <main class="max-w-7xl mx-auto">
+    <section class="px-6 py-12 text-center bg-neutral-50">
+      <h2 class="text-4xl font-semibold mb-4">Cloud-like Cotton</h2>
+      <p class="text-gray-700 max-w-2xl mx-auto text-base leading-relaxed">
+        Born from the cotton fields of China, we choose only the gentlest touch. Bouncy, breathable, never too slippery or stiff — like sleeping inside a cloud.
+      </p>
+      <p class="text-gray-700 mt-4 max-w-2xl mx-auto text-base leading-relaxed">
+        We don’t choose cotton for luxury, but for memory. For the way it hugs, folds, and breathes — like a grandmother’s quilt, or a safe Sunday morning.
+      </p>
+    </section>
 
-  <section class="p-6">
-    <h3 id="duvet" class="text-xl font-semibold mt-8 mb-4">Duvet Covers</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <div class="border p-2 rounded-xl shadow">
-        <img src="/images/cotton-duvet-1.jpg" alt="Cotton Duvet Set" class="rounded" />
-        <h4 class="font-semibold mt-2">Soft Cotton Duvet Set</h4>
-        <p class="text-sm text-gray-600">Queen | OEKO-TEX | Breathable</p>
+    <section class="px-6 py-12 bg-white space-y-10">
+      <div id="duvet">
+        <h3 class="text-2xl font-semibold mb-6">Duvet Covers</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/duvet1.jpg" alt="Cotton Duvet Set" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Cloud Embrace Duvet</h4>
+            <p class="text-sm text-gray-500">OEKO-TEX | Breathable</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/duvet2.jpg" alt="Heritage Loom Duvet" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Classic Cotton Duvet</h4>
+            <p class="text-sm text-gray-500">Durable | Machine-washable</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/duvet3.jpg" alt="Vintage Washed Duvet" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Memory Wash Duvet</h4>
+            <p class="text-sm text-gray-500">Wrinkle-softened | Relaxed Look</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <h3 id="quilt" class="text-xl font-semibold mt-10 mb-4">Quilt Covers</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <div class="border p-2 rounded-xl shadow">
-        <img src="/images/cotton-quilt-1.jpg" alt="Cotton Quilt Cover" class="rounded" />
-        <h4 class="font-semibold mt-2">Lightweight Cotton Quilt Cover</h4>
-        <p class="text-sm text-gray-600">King | Reversible | Soft Touch</p>
+      <div id="quilt">
+        <h3 class="text-2xl font-semibold mt-10 mb-6">Quilt Covers</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/quilt1.jpg" alt="Cotton Quilt Cover" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Featherlight Quilt Wrap</h4>
+            <p class="text-sm text-gray-500">Reversible | Soft Touch</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/quilt2.jpg" alt="Echo Weave Comforter" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Cotton Quilted Comforter</h4>
+            <p class="text-sm text-gray-500">Box Stitch | Cozy Layer</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/quilt3.jpg" alt="Horizon Lines Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Striped Cotton Quilt</h4>
+            <p class="text-sm text-gray-500">Lightweight | Pre-washed</p>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <h3 id="sheets" class="text-xl font-semibold mt-10 mb-4">Sheet Sets</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      <div class="border p-2 rounded-xl shadow">
-        <img src="/images/cotton-sheet-1.jpg" alt="Cotton Sheet Set" class="rounded" />
-        <h4 class="font-semibold mt-2">Organic Cotton Sheet Set</h4>
-        <p class="text-sm text-gray-600">Full | GOTS Certified | Crisp Percale</p>
+      <div id="sheets">
+        <h3 class="text-2xl font-semibold mt-10 mb-6">Sheet Sets</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/sheet1.jpg" alt="Cotton Sheet Set" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Spring Roots Sheet Set</h4>
+            <p class="text-sm text-gray-500">Crisp & Cool | Long-staple Cotton</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/sheet2.jpg" alt="Moonlit Sateen Sheets" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Sateen Cotton Sheets</h4>
+            <p class="text-sm text-gray-500">Soft Finish | Deep Pocket</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/sheet3.jpg" alt="Morning Mist Percale" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Percale Cotton Sheets</h4>
+            <p class="text-sm text-gray-500">Cool Touch | 300TC</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer class="p-4 mt-8 text-center text-sm text-gray-500">
+  <footer class="p-6 mt-12 text-center text-sm text-gray-500">
     UnionYiyi Bedding © 2025. Designed for restful nights worldwide.
   </footer>
 </body>

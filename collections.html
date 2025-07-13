@@ -3,140 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Collections | UnionYiyi</title>
+  <title>Collections | UnionYiyi Bedding</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
+    :root {
+      --gold: #c5a063;
+      --deep: #5a4a3f;
+      --light: #f8f1e5;
+    }
+
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #fefcf8;
-      color: #2f2f2f;
+      font-family: serif;
+      background: white;
+      color: var(--deep);
     }
+
     header {
-      background-color: #f4f0ec;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: white;
     }
+
     nav a {
-      margin-left: 20px;
+      margin: 0 10px;
       text-decoration: none;
-      color: #6c584c;
+      color: var(--deep);
       font-weight: bold;
     }
+
     .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("images/night-bedding-refined.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 60px 20px 30px;
-      background-color: #fffdf9;
+      color: white;
+      position: relative;
     }
-    .hero h1 {
-      font-size: 2.8em;
-      color: #5b4b3a;
-      margin-bottom: 20px;
-    }
-    .collections {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      max-width: 1200px;
-      margin: 40px auto;
+
+    .hero-text {
+      max-width: 800px;
       padding: 0 20px;
     }
-    .collection-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+
+    .hero-text h1 {
+      font-size: 3.8em;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
-    .collection-item img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 6px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+
+    .hero-text p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 0 30px;
+    }
+
+    .section h2 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 40px;
+      color: var(--gold);
+      position: relative;
+    }
+
+    .section h2::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: var(--gold);
+      margin: 12px auto 0;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    .collection-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      background: #fff;
+      transition: transform 0.3s;
+    }
+
+    .collection-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-img {
+      height: 280px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-body {
+      padding: 25px;
+    }
+
+    .card-body h3 {
+      font-size: 1.6em;
+      color: var(--gold);
       margin-bottom: 15px;
     }
-    .collection-item h2 {
-      font-size: 1.4em;
-      color: #5b4b3a;
-      margin: 10px 0 8px;
+
+    .card-body p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      color: #444;
     }
-    .collection-item p {
-      font-size: 1em;
-      color: #7e6b53;
-      line-height: 1.6em;
-      padding: 0 10px;
-    }
+
     footer {
       text-align: center;
-      padding: 30px;
-      background-color: #f4f0ec;
-      font-size: 0.9em;
-      color: #999;
-    }
-    @media (max-width: 800px) {
-      .collections {
-        grid-template-columns: 1fr;
-      }
+      padding: 60px 20px;
+      font-size: 1em;
+      color: var(--deep);
+      background: #f6f1e5;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div style="font-size: 1.5em; font-weight: bold;">UnionYiyi</div>
+    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="cotton.html">Cotton</a>
-      <a href="linen.html">Linen</a>
-      <a href="silk.html">Silk</a>
+      <a href="cotton.html">Cloud Cotton</a>
+      <a href="linen.html">Sky Linen</a>
+      <a href="silk.html">Imperial Silk</a>
       <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Our Philosophy</a>
+      <a href="brand-philosophy.html">Philosophy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+  <!-- 英文不直白，东方的含蓄美 -->
   <div class="hero">
-    <h1>Our Collections</h1>
-    <p>Each design speaks softly. No shouting logos. Just textile, soul, and story.</p>
+    <div class="hero-text">
+      <h1>Softness Meets Stillness</h1>
+      <p>Not just sheets, but rituals of rest. <br>Our collections are crafted not to impress, but to bring peace — in color, in feel, in breath.</p>
+    </div>
   </div>
 
-  <div class="collections">
-    <div class="collection-item">
-      <img src="images/collection1.jpg" alt="Classic Whites">
-      <h2>Classic Whites</h2>
-      <p>Timeless, soft, serene. Our all-white bedding sets embrace peace and simplicity.</p>
+  <!-- 展示三大床品系列 -->
+  <section class="section">
+    <h2>Our Signature Collections</h2>
+    <div class="collection-grid">
+      <div class="collection-card">
+        <div class="card-img" style="background-image: url('images/collection-cotton-card.jpg');"></div>
+        <div class="card-body">
+          <h3>Cloud Cotton</h3>
+          <p>800-thread-count softness woven with still air and quiet mornings. For those who sleep light, dream deep.</p>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="card-img" style="background-image: url('images/collection-linen-card.jpg');"></div>
+        <div class="card-body">
+          <h3>Sky Linen</h3>
+          <p>Cool as twilight wind, our linen flows with breath. Ideal for warm summer nights and unhurried dawns.</p>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="card-img" style="background-image: url('images/collection-silk-card.jpg');"></div>
+        <div class="card-body">
+          <h3>Imperial Silk</h3>
+          <p>Smooth like moonlight, this collection whispers luxury without a word. From Forbidden City to your bed.</p>
+        </div>
+      </div>
     </div>
-    <div class="collection-item">
-      <img src="images/collection2.jpg" alt="Nature Inspired">
-      <h2>Nature Inspired</h2>
-      <p>Earth tones and natural patterns — like sleeping beside a stream under the trees.</p>
-    </div>
-    <div class="collection-item">
-      <img src="images/collection3.jpg" alt="Loomed Traditions">
-      <h2>Loomed Traditions</h2>
-      <p>Reviving ancient weaving styles and heritage motifs into everyday modern use.</p>
-    </div>
-    <div class="collection-item">
-      <img src="images/collection4.jpg" alt="Bare Luxury">
-      <h2>Bare Luxury</h2>
-      <p>No glitz, no sheen — just texture, breathability, and comfort in every thread.</p>
-    </div>
-    <div class="collection-item">
-      <img src="images/collection5.jpg" alt="Soft Geometry">
-      <h2>Soft Geometry</h2>
-      <p>Clean lines meet comfort. Balanced compositions made for minimalist hearts.</p>
-    </div>
-    <div class="collection-item">
-      <img src="images/collection6.jpg" alt="Quiet Romance">
-      <h2>Quiet Romance</h2>
-      <p>Faint florals, dusky tones, a gentle embrace. A soft whisper of sweetness.</p>
-    </div>
-  </div>
+  </section>
 
   <footer>
-    &copy; 2025 UnionYiyi. All rights reserved.
+    &copy; 2025 UnionYiyi Bedding. All rights reserved.<br>
+    <small>Sleep isn’t escape. It’s return.</small>
   </footer>
 
 </body>

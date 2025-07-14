@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cotton | UnionYiyi Bedding</title>
-  <meta name="description" content="Discover our full cotton bedding collection: duvet covers, quilt covers, and sheet sets. Timeless softness for restful nights." />
+  <title>Cloud Cotton | UnionYiyi Bedding</title>
+  <meta name="description" content="Experience the irresistibly soft, bouncy comfort of our Cloud Cotton bedding—designed for humans first, inspired by nature. Duvets, quilts, and sheet sets available.">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html {
       scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Noto Serif', serif;
+      background-color: #fefdfb;
     }
     .dropdown:hover .dropdown-menu {
       display: block;
@@ -16,17 +21,14 @@
     .dropdown-menu a {
       white-space: nowrap;
     }
-    body {
-      font-family: 'Noto Serif', serif;
-      background-color: #fdfdfb;
-    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="text-stone-800">
+
+  <!-- Header -->
   <header class="max-w-7xl mx-auto px-6 py-4 border-b flex justify-between items-center bg-white">
-    <h1 class="text-2xl font-bold tracking-wide text-stone-800">UnionYiyi</h1>
-    <nav class="flex space-x-6 text-base font-medium text-stone-800">
+    <h1 class="text-2xl font-bold tracking-wide">UnionYiyi</h1>
+    <nav class="flex space-x-6 text-base font-medium">
       <a href="/index.html" class="hover:text-stone-600">Home</a>
       <div class="relative dropdown">
         <button class="hover:text-stone-600">Cloud Cotton</button>
@@ -41,88 +43,96 @@
       <a href="/linen.html" class="hover:text-stone-600">Sky Linen</a>
       <a href="/silk.html" class="hover:text-stone-600">Imperial Silk</a>
       <a href="/collections.html" class="hover:text-stone-600">Collections</a>
-      <a href="/philosophy.html" class="hover:text-stone-600">Philosophy</a>
+      <a href="/brand-philosophy.html" class="hover:text-stone-600">Philosophy</a>
       <a href="/contact.html" class="hover:text-stone-600">Contact</a>
     </nav>
   </header>
 
-  <main class="max-w-7xl mx-auto">
-    <section class="px-6 py-12 text-center bg-gradient-to-b from-stone-200 to-white">
-      <h2 class="text-5xl font-semibold mb-6 drop-shadow">Cloud-like Cotton</h2>
-      <p class="text-lg text-stone-700 max-w-3xl mx-auto leading-relaxed">
-        Born from the cotton fields of China, we choose only the gentlest touch. Bouncy, breathable, never too slippery or stiff — like sleeping inside a cloud.<br>
-        We don’t choose cotton for luxury, but for memory. For the way it hugs, folds, and breathes — like a grandmother’s quilt, or a safe Sunday morning.
-      </p>
-    </section>
+  <!-- Hero Section -->
+  <section class="px-6 py-12 text-center bg-gradient-to-b from-stone-200 to-white">
+    <h2 class="text-5xl font-semibold mb-6 drop-shadow">Cloud Cotton</h2>
+    <p class="text-lg max-w-3xl mx-auto leading-relaxed text-stone-700">
+      What touches your skin touches your soul. We choose cotton not because it’s trendy—but because it listens. Soft, breathable, and comfortingly elastic, it invites you to rest without resistance. <br><br>
+      When you sink into our cotton bedding, it’s not just a product—it’s the closest thing to being held.
+    </p>
+  </section>
 
-    <section class="px-6 py-12 bg-white space-y-10">
+  <!-- Product Sections -->
+  <main class="max-w-7xl mx-auto">
+    <section class="px-6 py-12 space-y-16 bg-white">
+
+      <!-- Duvet Covers -->
       <div id="duvet">
         <h3 class="text-2xl font-semibold mb-6">Duvet Covers</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div class="rounded-2xl shadow p-4">
-            <img src="/images/duvet1.jpg" alt="Cotton Duvet Set" class="rounded-lg mb-2">
+            <img src="/images/duvet1.jpg" alt="Cloud Embrace Duvet" class="rounded-lg mb-2">
             <h4 class="font-semibold">Cloud Embrace Duvet</h4>
-            <p class="text-sm text-gray-500">OEKO-TEX | Breathable</p>
+            <p class="text-sm text-gray-500">800TC | Breathable | OEKO-TEX</p>
           </div>
           <div class="rounded-2xl shadow p-4">
             <img src="/images/duvet2.jpg" alt="Classic Cotton Duvet" class="rounded-lg mb-2">
             <h4 class="font-semibold">Classic Cotton Duvet</h4>
-            <p class="text-sm text-gray-500">Durable | Machine-washable</p>
+            <p class="text-sm text-gray-500">Long-staple cotton | Anti-pilling</p>
           </div>
           <div class="rounded-2xl shadow p-4">
             <img src="/images/duvet3.jpg" alt="Memory Wash Duvet" class="rounded-lg mb-2">
             <h4 class="font-semibold">Memory Wash Duvet</h4>
-            <p class="text-sm text-gray-500">Wrinkle-softened | Relaxed Look</p>
+            <p class="text-sm text-gray-500">Stonewashed | Relaxed Finish</p>
           </div>
         </div>
       </div>
 
+      <!-- Quilt Covers -->
       <div id="quilt">
-        <h3 class="text-2xl font-semibold mt-10 mb-6">Quilt Covers</h3>
+        <h3 class="text-2xl font-semibold mb-6">Quilt Covers</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div class="rounded-2xl shadow p-4">
-            <img src="/images/quilt1.jpg" alt="Featherlight Quilt Wrap" class="rounded-lg mb-2">
-            <h4 class="font-semibold">Featherlight Quilt Wrap</h4>
-            <p class="text-sm text-gray-500">Reversible | Soft Touch</p>
+            <img src="/images/quilt1.jpg" alt="Featherlight Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Featherlight Quilt</h4>
+            <p class="text-sm text-gray-500">Reversible | Ultra Light | Soft Touch</p>
           </div>
           <div class="rounded-2xl shadow p-4">
-            <img src="/images/quilt2.jpg" alt="Cotton Quilted Comforter" class="rounded-lg mb-2">
-            <h4 class="font-semibold">Cotton Quilted Comforter</h4>
-            <p class="text-sm text-gray-500">Box Stitch | Cozy Layer</p>
+            <img src="/images/quilt2.jpg" alt="Heritage Stitch Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Heritage Stitch Quilt</h4>
+            <p class="text-sm text-gray-500">Boxed Pattern | Cozy Layer</p>
           </div>
           <div class="rounded-2xl shadow p-4">
-            <img src="/images/quilt3.jpg" alt="Striped Cotton Quilt" class="rounded-lg mb-2">
-            <h4 class="font-semibold">Striped Cotton Quilt</h4>
-            <p class="text-sm text-gray-500">Lightweight | Pre-washed</p>
+            <img src="/images/quilt3.jpg" alt="Cotton Loft Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Cotton Loft Quilt</h4>
+            <p class="text-sm text-gray-500">Airy Fill | OEKO-TEX</p>
           </div>
         </div>
       </div>
 
+      <!-- Sheet Sets -->
       <div id="sheets">
-        <h3 class="text-2xl font-semibold mt-10 mb-6">Sheet Sets</h3>
+        <h3 class="text-2xl font-semibold mb-6">Sheet Sets</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div class="rounded-2xl shadow p-4">
             <img src="/images/sheet1.jpg" alt="Spring Roots Sheet Set" class="rounded-lg mb-2">
             <h4 class="font-semibold">Spring Roots Sheet Set</h4>
-            <p class="text-sm text-gray-500">Crisp & Cool | Long-staple Cotton</p>
+            <p class="text-sm text-gray-500">Crisp Percale | Long-staple Cotton</p>
           </div>
           <div class="rounded-2xl shadow p-4">
-            <img src="/images/sheet2.jpg" alt="Sateen Cotton Sheets" class="rounded-lg mb-2">
-            <h4 class="font-semibold">Sateen Cotton Sheets</h4>
-            <p class="text-sm text-gray-500">Soft Finish | Deep Pocket</p>
+            <img src="/images/sheet2.jpg" alt="Sateen Glow Sheets" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Sateen Glow Sheets</h4>
+            <p class="text-sm text-gray-500">Lustrous Finish | Deep Pocket</p>
           </div>
           <div class="rounded-2xl shadow p-4">
-            <img src="/images/sheet3.jpg" alt="Percale Cotton Sheets" class="rounded-lg mb-2">
-            <h4 class="font-semibold">Percale Cotton Sheets</h4>
-            <p class="text-sm text-gray-500">Cool Touch | 300TC</p>
+            <img src="/images/sheet3.jpg" alt="Night Bloom Percale" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Night Bloom Percale</h4>
+            <p class="text-sm text-gray-500">300TC | Cool & Breathable</p>
           </div>
         </div>
       </div>
+
     </section>
   </main>
 
   <footer class="p-6 mt-12 text-center text-sm text-stone-500">
-    UnionYiyi Bedding © 2025. Designed for restful nights worldwide.
+    &copy; 2025 UnionYiyi. Where softness meets soul.
   </footer>
+
 </body>
 </html>

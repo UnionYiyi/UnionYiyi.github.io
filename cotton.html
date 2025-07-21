@@ -3,60 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cloud Cotton | UnionYiyi</title>
   <link rel="stylesheet" href="css/style.css">
-  <title>Cotton | UnionYiyi</title>
+  <style>
+    :root {
+      --gold: #c5a063;
+      --deep: #5a4a3f;
+      --light: #f8f1e5;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Noto Serif', serif;
+      background: var(--light);
+      color: var(--deep);
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--light);
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--deep);
+      font-weight: bold;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: var(--deep);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("images/cotton-hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero-text {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .hero-text p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .section-block {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 30px;
+    }
+
+    .section-block h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1em;
+      color: var(--deep);
+      background: #f6f1e5;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">UnionYiyi</div>
+    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="cotton.html" class="dropbtn">Cotton ▼</a>
+        <a href="cotton.html" class="dropbtn">Cloud Cotton ▼</a>
         <div class="dropdown-content">
           <a href="#duvet">Duvet Covers</a>
           <a href="#quilt">Quilt Covers</a>
-          <a href="#sheet">Sheet Sets</a>
+          <a href="#sheets">Sheet Sets</a>
         </div>
       </div>
-      <a href="linen.html">Linen</a>
-      <a href="silk.html">Silk</a>
+      <a href="linen.html">Sky Linen</a>
+      <a href="silk.html">Midsummer Silk</a>
       <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Our Philosophy</a>
+      <a href="brand-philosophy.html">Philosophy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="hero">
+    <div class="hero-text">
+      <h1>Cloud Cotton</h1>
+      <p>Not stiff. Not slippery. Just that familiar bounce when your hand presses in — like a hug waiting for you.</p>
+      <p>It doesn’t draw attention. It simply stays close, the way love does. Not flashy. Just real. And warm.</p>
+    </div>
+  </div>
 
-    <h1>Cloud-like Cotton</h1>
-    <p>Not stiff. Not slippery. Just that familiar bounce when your hand presses in — like a hug waiting for you.</p>
-    <p>It doesn’t draw attention. It simply stays close, the way love does. Not flashy. Just real. And warm.</p>
-  </div>
-<section class="section-block" id="duvet">
-  <h2>Duvet Covers</h2>
-  <div class="gallery">
-    <img src="images/cotton_duvet1.jpg" alt="Cloud Embrace Duvet">
-    <img src="images/cotton_duvet2.jpg" alt="Classic Cotton Duvet">
-    <img src="images/cotton_duvet3.jpg" alt="Memory Soft Duvet">
-  </div>
-</section>
+  <section class="section-block" id="duvet">
+    <h2>Duvet Covers</h2>
+    <div class="gallery">
+      <img src="images/cotton_duvet1.jpg" alt="Cloud Embrace Duvet">
+      <img src="images/cotton_duvet2.jpg" alt="Classic Cotton Duvet">
+      <img src="images/cotton_duvet3.jpg" alt="Memory Soft Duvet">
+    </div>
+  </section>
 
-<section class="section-block" id="quilt">
-  <h2>Quilt Covers</h2>
-  <div class="gallery">
-    <img src="images/cotton_quilt1.jpg" alt="Featherlight Quilt Wrap">
-    <img src="images/cotton_quilt2.jpg" alt="Cotton Quilted Comforter">
-    <img src="images/cotton_quilt3.jpg" alt="Striped Cotton Quilt">
-  </div>
-</section>
+  <section class="section-block" id="quilt">
+    <h2>Quilt Covers</h2>
+    <div class="gallery">
+      <img src="images/cotton_quilt1.jpg" alt="Featherlight Quilt Wrap">
+      <img src="images/cotton_quilt2.jpg" alt="Cotton Quilted Comforter">
+      <img src="images/cotton_quilt3.jpg" alt="Striped Cotton Quilt">
+    </div>
+  </section>
 
-<section class="section-block" id="sheets">
-  <h2>Sheet Sets</h2>
-  <div class="gallery">
-    <img src="images/cotton_sheet1.jpg" alt="All-Season Cotton Sheets">
-    <img src="images/cotton_sheet2.jpg" alt="Breathable Percale Sheets">
-    <img src="images/cotton_sheet3.jpg" alt="Soft Cloud Sheet Set">
-  </div>
-</section>
+  <section class="section-block" id="sheets">
+    <h2>Sheet Sets</h2>
+    <div class="gallery">
+      <img src="images/cotton_sheet1.jpg" alt="All-Season Cotton Sheets">
+      <img src="images/cotton_sheet2.jpg" alt="Breathable Percale Sheets">
+      <img src="images/cotton_sheet3.jpg" alt="Soft Cloud Sheet Set">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 UnionYiyi Bedding. All rights reserved.<br>
+    <small>Sleep isn’t escape. It’s return.</small>
+  </footer>
+
+</body>
+</html>

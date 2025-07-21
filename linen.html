@@ -2,43 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="css/style.css">
-  <title>Linen | UnionYiyi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linen | UnionYiyi Bedding</title>
+  <meta name="description" content="Explore our sky linen collection: naturally woven duvet covers, quilts, and sheets. Light, earthy, and free like the wind." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+    body {
+      font-family: 'Noto Serif', serif;
+      background-color: #fdfdfb;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
-
-  <header>
-    <div class="logo">UnionYiyi</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cotton.html">Cotton</a>
-      <a href="linen.html">Linen</a>
-      <a href="silk.html">Silk</a>
-      <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Our Philosophy</a>
-      <a href="contact.html">Contact</a>
+<body class="text-stone-800">
+  <header class="max-w-full px-6 py-4 border-b flex justify-between items-center bg-white">
+    <h1 class="text-2xl font-bold tracking-wide text-stone-800">UnionYiyi</h1>
+    <nav class="flex space-x-6 text-base font-medium text-stone-800">
+      <a href="/index.html" class="hover:text-stone-600">Home</a>
+      <div class="relative dropdown">
+        <button class="hover:text-stone-600">Sky Linen</button>
+        <div class="absolute hidden dropdown-menu bg-white shadow rounded mt-2 z-10 text-left min-w-max">
+          <ul class="text-base p-2 space-y-1">
+            <li><a href="#duvet" class="block px-4 py-2 hover:bg-stone-100">Duvet Covers</a></li>
+            <li><a href="#quilt" class="block px-4 py-2 hover:bg-stone-100">Quilt Covers</a></li>
+            <li><a href="#sheets" class="block px-4 py-2 hover:bg-stone-100">Sheet Sets</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="/cotton.html" class="hover:text-stone-600">Cloud Cotton</a>
+      <a href="/silk.html" class="hover:text-stone-600">Imperial Silk</a>
+      <a href="/collections.html" class="hover:text-stone-600">Collections</a>
+      <a href="/philosophy.html" class="hover:text-stone-600">Philosophy</a>
+      <a href="/contact.html" class="hover:text-stone-600">Contact</a>
     </nav>
   </header>
 
-  <div class="hero">
-    <h1>Breath of Linen</h1>
-    <p>Harvested from the flax fields, linen is light yet enduring — crisp to the touch, cool on the skin, and deeply natural.</p>
-    <p>We choose linen for its purity and grace. For the way it flows and wrinkles — like morning light on stone walls.</p>
-  </div>
+  <main class="max-w-full">
+    <section class="px-6 py-12 text-center bg-gradient-to-b from-stone-200 to-white">
+      <h2 class="text-5xl font-semibold mb-6 drop-shadow">Sky-Touched Linen</h2>
+      <p class="text-lg text-stone-700 max-w-3xl mx-auto leading-relaxed">
+        Grown from the earth, woven by hand, and kissed by the sky — our linen is a story of freedom.<br>
+        There’s a lightness that calls to the soul, like open fields under wind, or bare feet in summer. It doesn't press, it lets go. It lets you dream.
+      </p>
+    </section>
 
-  <div class="gallery">
-    <img src="images/linen1.jpg" alt="Linen Fabric 1">
-    <img src="images/linen2.jpg" alt="Linen Fabric 2">
-    <img src="images/linen3.jpg" alt="Linen Fabric 3">
-    <img src="images/linen4.jpg" alt="Linen Fabric 4">
-    <img src="images/linen5.jpg" alt="Linen Fabric 5">
-    <img src="images/linen6.jpg" alt="Linen Fabric 6">
-  </div>
+    <section class="px-6 py-12 bg-white space-y-10">
+      <div id="duvet">
+        <h3 class="text-2xl font-semibold mb-6">Duvet Covers</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_duvet1.jpg" alt="Linen Duvet Cover Breeze" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Breeze Linen Duvet</h4>
+            <p class="text-sm text-gray-500">Air-washed | Naturally wrinkled</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_duvet2.jpg" alt="Earth Linen Duvet" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Earth Linen Duvet</h4>
+            <p class="text-sm text-gray-500">Pre-softened | OEKO-TEX</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_duvet3.jpg" alt="Sky Line Linen Duvet" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Sky Line Linen</h4>
+            <p class="text-sm text-gray-500">Feather-light | Woven feel</p>
+          </div>
+        </div>
+      </div>
 
-  <footer>
-    &copy; 2025 UnionYiyi. All rights reserved.
+      <div id="quilt">
+        <h3 class="text-2xl font-semibold mt-10 mb-6">Quilt Covers</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_quilt1.jpg" alt="Linen Patchwork Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Patchwork Linen Quilt</h4>
+            <p class="text-sm text-gray-500">Light layers | Natural tones</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_quilt2.jpg" alt="Woven Stone Linen Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Woven Stone Linen</h4>
+            <p class="text-sm text-gray-500">Earth color | Breezy texture</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_quilt3.jpg" alt="Linen Sky Quilt" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Linen Sky Quilt</h4>
+            <p class="text-sm text-gray-500">Ultra-breathable | Relaxed fit</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="sheets">
+        <h3 class="text-2xl font-semibold mt-10 mb-6">Sheet Sets</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_sheet1.jpg" alt="Natural Linen Sheets" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Natural Linen Sheets</h4>
+            <p class="text-sm text-gray-500">Organic flax | Softened weave</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_sheet2.jpg" alt="Horizon Linen Sheet Set" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Horizon Linen Set</h4>
+            <p class="text-sm text-gray-500">Stonewashed | All-season cool</p>
+          </div>
+          <div class="rounded-2xl shadow p-4">
+            <img src="/images/linen_sheet3.jpg" alt="Light Cloud Linen Sheets" class="rounded-lg mb-2">
+            <h4 class="font-semibold">Light Cloud Linen</h4>
+            <p class="text-sm text-gray-500">Feather feel | Breathable</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="p-6 mt-12 text-center text-sm text-stone-500">
+    UnionYiyi Bedding © 2025. Designed for light dreams, like wind across fields.
   </footer>
-
 </body>
 </html>

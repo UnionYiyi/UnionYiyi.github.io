@@ -13,6 +13,23 @@
       background: #fefcf9;
       color: #443322;
     }
+    .mainnav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #ffffff;
+      padding: 18px 0;
+      border-bottom: 1px solid #eee;
+      font-weight: bold;
+      font-size: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .mainnav a {
+      color: #443322;
+      text-decoration: none;
+    }
     header {
       background: linear-gradient(to bottom, #f6f1eb, #fefcf9);
       padding: 50px 20px 30px;
@@ -37,8 +54,8 @@
       font-weight: bold;
       font-size: 16px;
       position: sticky;
-      top: 0;
-      z-index: 100;
+      top: 60px;
+      z-index: 999;
     }
     nav.subnav a {
       color: #443322;
@@ -84,6 +101,18 @@
 </head>
 <body>
 
+<!-- 主导航（顶部主菜单） -->
+<nav class="mainnav">
+  <a href="index.html">Home</a>
+  <a href="cotton.html">Cloud Cotton</a>
+  <a href="linen.html">Sky Linen</a>
+  <a href="silk.html">Imperial Silk</a>
+  <a href="collections.html">Collections</a>
+  <a href="brand-philosophy.html">Philosophy</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- 页面顶部描述 -->
 <header>
   <h1>Sky-Touched Linen</h1>
   <p class="subtext">
@@ -93,12 +122,14 @@
   </p>
 </header>
 
+<!-- 子导航 -->
 <nav class="subnav">
   <a href="#duvet">Duvet Covers</a>
   <a href="#quilt">Quilt Covers</a>
   <a href="#sheet">Sheet Sets</a>
 </nav>
 
+<!-- Duvet Covers 区块 -->
 <div class="section" id="duvet">
   <h2>Duvet Covers</h2>
   <div class="products">
@@ -120,6 +151,7 @@
   </div>
 </div>
 
+<!-- Quilt Covers 区块 -->
 <div class="section" id="quilt">
   <h2>Quilt Covers</h2>
   <div class="products">
@@ -141,6 +173,7 @@
   </div>
 </div>
 
+<!-- Sheet Sets 区块 -->
 <div class="section" id="sheet">
   <h2>Sheet Sets</h2>
   <div class="products">
@@ -162,6 +195,7 @@
   </div>
 </div>
 
+<!-- 页脚 -->
 <footer>
   &copy; 2025 UnionYiyi Bedding. All rights reserved.
 </footer>

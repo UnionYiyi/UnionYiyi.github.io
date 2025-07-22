@@ -3,124 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <title>Sky Linen | UnionYiyi</title>
+  <link rel="stylesheet" href="css/style.css">
   <style>
+    :root {
+      --gold: #c5a063;
+      --deep: #443322;
+      --light: #fdf7ef;
+    }
+
     body {
-      font-family: 'Noto Serif', serif;
-      color: #443322;
       margin: 0;
-      background-color: #fdf9f4;
+      font-family: 'Noto Serif', serif;
+      background: var(--light);
+      color: var(--deep);
     }
 
     header {
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 2rem;
-      background-color: #fdf9f4;
-      border-bottom: 1px solid #e0dcd2;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
+      background: var(--light);
     }
 
     nav a {
-      margin-left: 1.5rem;
+      margin: 0 10px;
       text-decoration: none;
-      color: #443322;
+      color: var(--deep);
       font-weight: bold;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: var(--deep);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .hero {
-      text-align: center;
-      padding: 4rem 2rem 2rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 0.5rem auto;
-      line-height: 1.6;
-    }
-
-    .subnav {
+      height: 100vh;
+      background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.6)), url("images/linen-hero.jpg") center/cover no-repeat;
       display: flex;
+      align-items: center;
       justify-content: center;
-      background-color: #f3eee7;
-      padding: 1rem;
+      text-align: center;
+      color: var(--deep);
     }
 
-    .subnav a {
-      margin: 0 1.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      color: #443322;
+    .hero-text {
+      max-width: 800px;
+      padding: 0 20px;
     }
 
-    .section {
-      padding: 2.5rem 2rem;
+    .hero-text h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 6px rgba(255,255,255,0.8);
     }
 
-    .section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+    .hero-text p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      text-shadow: 0 1px 4px rgba(255,255,255,0.7);
     }
 
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
+    .section-block {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 30px;
     }
 
-    .product {
-      flex: 1 1 calc(33.33% - 2rem);
-      border: 1px solid #e2ddd2;
-      border-radius: 6px;
-      padding: 1rem;
-      background-color: #fffdf9;
+    .section-block h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: var(--gold);
+      margin-bottom: 40px;
     }
 
-    .product img {
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .gallery img {
       width: 100%;
-      height: auto;
-      border-radius: 4px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     }
 
-    .product h3 {
-      margin: 1rem 0 0.5rem 0;
-    }
-
-    .product p {
-      font-size: 0.95rem;
-      color: #665544;
-    }
-
-    @media (max-width: 768px) {
-      .product {
-        flex: 1 1 100%;
-      }
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1em;
+      color: var(--deep);
+      background: #f6f1e5;
     }
   </style>
-  <title>Sky Linen | UnionYiyi</title>
 </head>
 <body>
 
   <header>
-    <div class="logo">UnionYiyi</div>
+    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="cotton.html">Cloud Cotton</a>
-      <a href="linen.html">Sky Linen</a>
+      <div class="dropdown">
+        <a href="linen.html" class="dropbtn">Sky Linen ▼</a>
+        <div class="dropdown-content">
+          <a href="#duvet">Duvet Covers</a>
+          <a href="#quilt">Quilt Covers</a>
+          <a href="#sheets">Sheet Sets</a>
+        </div>
+      </div>
       <a href="silk.html">Whisper Silk</a>
       <a href="collections.html">Collections</a>
       <a href="brand-philosophy.html">Philosophy</a>
@@ -129,80 +144,45 @@
   </header>
 
   <div class="hero">
-    <h1>Sky-Touched Linen</h1>
-    <p>Grown from the earth, woven by hand, and kissed by the sky — our linen is a story of freedom.</p>
-    <p>There’s a lightness that calls to the soul, like open fields under wind, or bare feet in summer.</p>
-    <p>It doesn’t press, it lets go. It lets you dream.</p>
+    <div class="hero-text">
+      <h1>Sky-Touched Linen</h1>
+      <p>Grown from the earth, woven by hand, and kissed by the sky — our linen is a story of freedom.</p>
+      <p>There’s a lightness that calls to the soul, like open fields under wind, or bare feet in summer.</p>
+      <p>It doesn’t press, it lets go. It lets you dream.</p>
+    </div>
   </div>
 
-  <div class="subnav">
-    <a href="#duvet">Duvet Covers</a>
-    <a href="#quilt">Quilt Covers</a>
-    <a href="#sheet">Sheet Sets</a>
-  </div>
-
-  <div class="section" id="duvet">
+  <section class="section-block" id="duvet">
     <h2>Duvet Covers</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/linen_duvet1.jpg" alt="Breeze Linen Duvet" />
-        <h3>Breeze Linen Duvet</h3>
-        <p>Air-washed ｜ Naturally wrinkled</p>
-      </div>
-      <div class="product">
-        <img src="images/linen_duvet2.jpg" alt="Earth Linen Duvet" />
-        <h3>Earth Linen Duvet</h3>
-        <p>Pre-softened ｜ OEKO-TEX</p>
-      </div>
-      <div class="product">
-        <img src="images/linen_duvet3.jpg" alt="Sky Line Linen Duvet" />
-        <h3>Sky Line Linen</h3>
-        <p>Feather-light ｜ Woven feel</p>
-      </div>
+    <div class="gallery">
+      <img src="images/linen_duvet1.jpg" alt="Breeze Linen Duvet">
+      <img src="images/linen_duvet2.jpg" alt="Earth Linen Duvet">
+      <img src="images/linen_duvet3.jpg" alt="Sky Line Linen Duvet">
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="quilt">
+  <section class="section-block" id="quilt">
     <h2>Quilt Covers</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/linen_quilt1.jpg" alt="Patchwork Linen Quilt" />
-        <h3>Patchwork Linen Quilt</h3>
-        <p>Hand-dyed ｜ Rustic texture</p>
-      </div>
-      <div class="product">
-        <img src="images/linen_quilt2.jpg" alt="Woven Stone Linen Quilt" />
-        <h3>Woven Stone Quilt</h3>
-        <p>Stone-washed ｜ Cozy grain</p>
-      </div>
-      <div class="product">
-        <img src="images/linen_quilt3.jpg" alt="Linen Sky Quilt" />
-        <h3>Linen Sky Quilt</h3>
-        <p>Ultra-light ｜ Dream-layer</p>
-      </div>
+    <div class="gallery">
+      <img src="images/linen_quilt1.jpg" alt="Patchwork Linen Quilt">
+      <img src="images/linen_quilt2.jpg" alt="Woven Stone Linen Quilt">
+      <img src="images/linen_quilt3.jpg" alt="Sky Linen Sky Quilt">
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="sheet">
+  <section class="section-block" id="sheets">
     <h2>Sheet Sets</h2>
-    <div class="product-grid">
-      <div class="product">
-        <img src="images/linen_sheet1.jpg" alt="Cloudfield Linen Sheet" />
-        <h3>Cloudfield Sheet</h3>
-        <p>Soft breeze touch ｜ OEKO-TEX certified</p>
-      </div>
-      <div class="product">
-        <img src="images/linen_sheet2.jpg" alt="Stonegrey Linen Sheet" />
-        <h3>Stonegrey Sheet</h3>
-        <p>Natural tones ｜ Easy breathability</p>
-      </div>
-      <div class="product">
-        <img src="images/linen_sheet3.jpg" alt="Skylight Linen Sheet" />
-        <h3>Skylight Sheet</h3>
-        <p>Feather-finish ｜ Earth-crafted</p>
-      </div>
+    <div class="gallery">
+      <img src="images/linen_sheet1.jpg" alt="Morning Linen Sheets">
+      <img src="images/linen_sheet2.jpg" alt="Sun-dried Linen Sheets">
+      <img src="images/linen_sheet3.jpg" alt="Dreamweight Linen Set">
     </div>
-  </div>
+  </section>
+
+  <footer>
+    &copy; 2025 UnionYiyi Bedding. All rights reserved.<br>
+    <small>Sleep isn’t escape. It’s return.</small>
+  </footer>
 
 </body>
 </html>

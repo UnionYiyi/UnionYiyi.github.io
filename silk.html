@@ -8,80 +8,115 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <div class="logo">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
       <div class="dropdown">
-        <a href="cotton.html" class="dropbtn">Cotton ▼</a>
+        <a href="cotton.html" class="dropbtn">Cloud Cotton ▼</a>
         <div class="dropdown-content">
           <a href="cotton.html#duvet">Duvet Covers</a>
           <a href="cotton.html#quilt">Quilt Covers</a>
-          <a href="cotton.html#sheets">Sheet Sets</a>
+          <a href="cotton.html#sheet">Sheet Sets</a>
         </div>
       </div>
       <div class="dropdown">
-        <a href="linen.html" class="dropbtn">Linen ▼</a>
+        <a href="linen.html" class="dropbtn">Sky Linen ▼</a>
         <div class="dropdown-content">
           <a href="linen.html#duvet">Duvet Covers</a>
           <a href="linen.html#quilt">Quilt Covers</a>
-          <a href="linen.html#sheets">Sheet Sets</a>
+          <a href="linen.html#sheet">Sheet Sets</a>
         </div>
       </div>
       <div class="dropdown">
-        <a href="silk.html" class="dropbtn">Silk ▼</a>
+        <a href="silk.html" class="dropbtn">Whisper Silk ▼</a>
         <div class="dropdown-content">
           <a href="#duvet">Duvet Covers</a>
           <a href="#quilt">Quilt Covers</a>
-          <a href="#sheets">Sheet Sets</a>
+          <a href="#sheet">Sheet Sets</a>
         </div>
       </div>
+      <a href="collections.html">Collections</a>
+      <a href="brand-philosophy.html">Philosophy</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main class="main-content">
-    <section class="hero silk-hero">
-      <h1>Whisper Silk</h1>
-      <p>Smoother than dreams, quieter than breath. When skin meets silk, the world slips away.</p>
-      <p>It doesn’t shout. It suggests. A whisper for passion. A promise of something more.</p>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Whisper Silk</h1>
+    <p>Smoother than dreams, quieter than breath. When skin meets silk, the world slips away.</p>
+    <p>It doesn’t shout. It suggests. A whisper for passion. A promise of something more.</p>
+  </section>
 
-    <section class="collection">
-      <h2>Silk Collection</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <img src="img/silk1.png" alt="Midnight Whisper Set" />
-          <p>Midnight Whisper Set</p>
-        </div>
-        <div class="product-card">
-          <img src="img/silk2.png" alt="Pearl Mist Bedding" />
-          <p>Pearl Mist Bedding</p>
-        </div>
-        <div class="product-card">
-          <img src="img/silk3.png" alt="Satin Caress Duvet" />
-          <p>Satin Caress Duvet</p>
-        </div>
+  <!-- Sub Navigation -->
+  <div class="subnav">
+    <a href="#duvet">Duvet Covers</a>
+    <a href="#quilt">Quilt Covers</a>
+    <a href="#sheet">Sheet Sets</a>
+  </div>
+
+  <!-- Duvet Covers -->
+  <section id="duvet">
+    <h2>Duvet Covers</h2>
+    <div class="product-row">
+      <div class="product-card">
+        <img src="images/silk1.png" alt="Whisper Touch Duvet">
+        <p>Whisper Touch Duvet</p>
       </div>
-    </section>
+      <div class="product-card">
+        <img src="images/silk2.png" alt="Midnight Silk Duvet">
+        <p>Midnight Silk Duvet</p>
+      </div>
+      <div class="product-card">
+        <img src="images/silk3.png" alt="Silken Drift Duvet">
+        <p>Silken Drift Duvet</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="duvet" class="silk-section">
-      <h2>Duvet Covers</h2>
-      <p>Flowing elegance that embraces you softly—duvet covers that breathe with your skin, and whisper of better nights.</p>
-    </section>
+  <!-- Quilt Covers -->
+  <section id="quilt">
+    <h2>Quilt Covers</h2>
+    <div class="product-row">
+      <div class="product-card">
+        <img src="images/silk4.png" alt="Twilight Quilt Cover">
+        <p>Twilight Quilt Cover</p>
+      </div>
+      <div class="product-card">
+        <img src="images/silk5.png" alt="Lustrous Layer Quilt">
+        <p>Lustrous Layer Quilt</p>
+      </div>
+      <div class="product-card">
+        <img src="images/silk6.png" alt="Embrace Silk Quilt">
+        <p>Embrace Silk Quilt</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="quilt" class="silk-section">
-      <h2>Quilt Covers</h2>
-      <p>Quilted silk that slides like a secret over your skin. Hushed beauty that holds the warmth of every touch.</p>
-    </section>
+  <!-- Sheet Sets -->
+  <section id="sheet">
+    <h2>Sheet Sets</h2>
+    <div class="product-row">
+      <div class="product-card">
+        <img src="images/silk7.png" alt="Midnight Whisper Set">
+        <p>Midnight Whisper Set</p>
+      </div>
+      <div class="product-card">
+        <img src="images/silk8.png" alt="Pearl Mist Bedding">
+        <p>Pearl Mist Bedding</p>
+      </div>
+      <div class="product-card">
+        <img src="images/silk9.png" alt="Satin Caress Duvet">
+        <p>Satin Caress Duvet</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="sheets" class="silk-section">
-      <h2>Sheet Sets</h2>
-      <p>Sink into ultimate smoothness. These sheets aren’t just soft—they’re sensual, inviting, and endlessly indulgent.</p>
-    </section>
-  </main>
-
-  <footer class="philosophy-footer">
-    <p>Silk, where passion lingers in silence. For those who seek more than sleep.</p>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 UnionYiyi. All rights reserved.</p>
   </footer>
 
 </body>

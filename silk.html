@@ -3,37 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whisper Silk | UnionYiyi</title>
   <link rel="stylesheet" href="css/style.css">
-  <title>Silk | UnionYiyi</title>
+  <style>
+    :root {
+      --gold: #c5a063;
+      --deep: #443322;
+      --light: #fdf7ef;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Noto Serif', serif;
+      background: var(--light);
+      color: var(--deep);
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--light);
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--deep);
+      font-weight: bold;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: var(--deep);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.6)), url("images/silk-hero.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--deep);
+    }
+
+    .hero-text {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 6px rgba(255,255,255,0.8);
+    }
+
+    .hero-text p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      text-shadow: 0 1px 4px rgba(255,255,255,0.7);
+    }
+
+    .section-block {
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 30px;
+    }
+
+    .section-block h2 {
+      text-align: center;
+      font-size: 2.2em;
+      color: var(--gold);
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1em;
+      color: var(--deep);
+      background: #f6f1e5;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">UnionYiyi</div>
+    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi</div>
     <nav>
       <a href="index.html">Home</a>
-      <div class="dropdown">
-        <a href="cotton.html" class="dropbtn">Cloud Cotton ▼</a>
-        <div class="dropdown-content">
-          <a href="cotton.html#duvet">Duvet Covers</a>
-          <a href="cotton.html#quilt">Quilt Covers</a>
-          <a href="cotton.html#sheet">Sheet Sets</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <a href="linen.html" class="dropbtn">Sky Linen ▼</a>
-        <div class="dropdown-content">
-          <a href="linen.html#duvet">Duvet Covers</a>
-          <a href="linen.html#quilt">Quilt Covers</a>
-          <a href="linen.html#sheet">Sheet Sets</a>
-        </div>
-      </div>
+      <a href="cotton.html">Cloud Cotton</a>
+      <a href="linen.html">Sky Linen</a>
       <div class="dropdown">
         <a href="silk.html" class="dropbtn">Whisper Silk ▼</a>
         <div class="dropdown-content">
           <a href="#duvet">Duvet Covers</a>
           <a href="#quilt">Quilt Covers</a>
-          <a href="#sheet">Sheet Sets</a>
+          <a href="#sheets">Sheet Sets</a>
         </div>
       </div>
       <a href="collections.html">Collections</a>
@@ -42,74 +143,44 @@
     </nav>
   </header>
 
-  <section class="hero silk-hero">
-    <h1>Whisper Silk</h1>
-    <p>Smoother than dreams, quieter than breath. When skin meets silk, the world slips away.</p>
-    <p>It doesn’t shout. It suggests. A whisper for passion. A promise of something more.</p>
-  </section>
-
-  <div class="subnav">
-    <a href="#duvet">Duvet Covers</a>
-    <a href="#quilt">Quilt Covers</a>
-    <a href="#sheet">Sheet Sets</a>
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Whisper Silk</h1>
+      <p>It’s not loud. It’s not cold. It doesn’t flaunt. It flows — a caress of heat and desire without a single word.</p>
+      <p>This is not just sleep. It’s a whisper for something deeper, closer — a better kind of love.</p>
+    </div>
   </div>
 
-  <section id="duvet" class="product-section">
+  <section class="section-block" id="duvet">
     <h2>Duvet Covers</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/silk1.jpg" alt="Whisper Touch Duvet">
-        <p>Whisper Touch Duvet</p>
-      </div>
-      <div class="product-card">
-        <img src="images/silk2.jpg" alt="Midnight Silk Duvet">
-        <p>Midnight Silk Duvet</p>
-      </div>
-      <div class="product-card">
-        <img src="images/silk3.jpg" alt="Silken Drift Duvet">
-        <p>Silken Drift Duvet</p>
-      </div>
+    <div class="gallery">
+      <img src="images/silk_duvet1.jpg" alt="Whisper Silk Duvet 1">
+      <img src="images/silk_duvet2.jpg" alt="Whisper Silk Duvet 2">
+      <img src="images/silk_duvet3.jpg" alt="Whisper Silk Duvet 3">
     </div>
   </section>
 
-  <section id="quilt" class="product-section">
+  <section class="section-block" id="quilt">
     <h2>Quilt Covers</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/silk4.jpg" alt="Twilight Quilt Cover">
-        <p>Twilight Quilt Cover</p>
-      </div>
-      <div class="product-card">
-        <img src="images/silk5.jpg" alt="Lustrous Layer Quilt">
-        <p>Lustrous Layer Quilt</p>
-      </div>
-      <div class="product-card">
-        <img src="images/silk6.jpg" alt="Embrace Silk Quilt">
-        <p>Embrace Silk Quilt</p>
-      </div>
+    <div class="gallery">
+      <img src="images/silk_quilt1.jpg" alt="Whisper Silk Quilt 1">
+      <img src="images/silk_quilt2.jpg" alt="Whisper Silk Quilt 2">
+      <img src="images/silk_quilt3.jpg" alt="Whisper Silk Quilt 3">
     </div>
   </section>
 
-  <section id="sheet" class="product-section">
+  <section class="section-block" id="sheets">
     <h2>Sheet Sets</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/silk7.jpg" alt="Pearl Mist Sheet Set">
-        <p>Pearl Mist Sheet Set</p>
-      </div>
-      <div class="product-card">
-        <img src="images/silk8.jpg" alt="Caress Cloud Sheet Set">
-        <p>Caress Cloud Sheet Set</p>
-      </div>
-      <div class="product-card">
-        <img src="images/silk9.jpg" alt="Serenity Shine Sheets">
-        <p>Serenity Shine Sheets</p>
-      </div>
+    <div class="gallery">
+      <img src="images/silk_sheet1.jpg" alt="Whisper Silk Sheets 1">
+      <img src="images/silk_sheet2.jpg" alt="Whisper Silk Sheets 2">
+      <img src="images/silk_sheet3.jpg" alt="Whisper Silk Sheets 3">
     </div>
   </section>
 
   <footer>
-    <p>© 2025 UnionYiyi. All rights reserved.</p>
+    &copy; 2025 UnionYiyi Bedding. All rights reserved.<br>
+    <small>Sleep isn’t escape. It’s return.</small>
   </footer>
 
 </body>

@@ -3,146 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Whisper Silk | UnionYiyi</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    :root {
-      --gold: #c5a063;
-      --deep: #443322;
-      --light: #fdf7ef;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Noto Serif', serif;
-      background: var(--light);
-      color: var(--deep);
-    }
-
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--light);
-    }
-
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: var(--deep);
-      font-weight: bold;
-    }
-
-    .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.7)), url("images/silk-hero.jpg") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: var(--deep);
-    }
-
-    .hero-text {
-      max-width: 800px;
-      padding: 0 20px;
-    }
-
-    .hero-text h1 {
-      font-size: 3.5em;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-      text-shadow: 0 2px 6px rgba(255,255,255,0.8);
-    }
-
-    .hero-text p {
-      font-size: 1.3em;
-      line-height: 1.6;
-      text-shadow: 0 1px 4px rgba(255,255,255,0.7);
-    }
-
-    .section-block {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 0 30px;
-    }
-
-    .section-block h2 {
-      text-align: center;
-      font-size: 2.2em;
-      color: var(--gold);
-      margin-bottom: 40px;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    footer {
-      text-align: center;
-      padding: 60px 20px;
-      font-size: 1em;
-      color: var(--deep);
-      background: #f6f1e5;
-    }
-  </style>
+  <title>Silk | UnionYiyi</title>
 </head>
 <body>
 
   <header>
-    <div style="font-size: 1.8em; font-weight: bold;">UnionYiyi</div>
+    <div class="logo">UnionYiyi</div>
     <nav>
-  <a href="index.html">Home</a>
-  <div class="dropdown">
-    <a href="cotton.html" class="dropbtn">Cloud Cotton</a>
-  </div>
-  <div class="dropdown">
-    <a href="linen.html" class="dropbtn">Sky Linen</a>
-  </div>
-  <div class="dropdown">
-    <a href="silk.html" class="dropbtn">Whisper Silk ▼</a>
-    <div class="dropdown-content">
-      <a href="#duvet">Duvet Covers</a>
-      <a href="#quilt">Quilt Covers</a>
-      <a href="#sheets">Sheet Sets</a>
-    </div>
-  </div>
-  <a href="collections.html">Collections</a>
-  <a href="brand-philosophy.html">Philosophy</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
+      <a href="index.html">Home</a>
+      <div class="dropdown">
+        <a href="cotton.html" class="dropbtn">Cotton ▼</a>
+        <div class="dropdown-content">
+          <a href="cotton.html#duvet">Duvet Covers</a>
+          <a href="cotton.html#quilt">Quilt Covers</a>
+          <a href="cotton.html#sheets">Sheet Sets</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="linen.html" class="dropbtn">Linen ▼</a>
+        <div class="dropdown-content">
+          <a href="linen.html#duvet">Duvet Covers</a>
+          <a href="linen.html#quilt">Quilt Covers</a>
+          <a href="linen.html#sheets">Sheet Sets</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="silk.html" class="dropbtn">Silk ▼</a>
+        <div class="dropdown-content">
+          <a href="#duvet">Duvet Covers</a>
+          <a href="#quilt">Quilt Covers</a>
+          <a href="#sheets">Sheet Sets</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <div class="hero">
-    <div class="hero-text">
+  <main class="main-content">
+    <section class="hero silk-hero">
       <h1>Whisper Silk</h1>
       <p>Smoother than dreams, quieter than breath. When skin meets silk, the world slips away.</p>
       <p>It doesn’t shout. It suggests. A whisper for passion. A promise of something more.</p>
-    </div>
-  </div>
+    </section>
 
-  <section class="section-block">
-    <h2>Silk Collection</h2>
-    <div class="gallery">
-      <img src="images/silk_set1.jpg" alt="Midnight Whisper Set">
-      <img src="images/silk_set2.jpg" alt="Pearl Mist Bedding">
-      <img src="images/silk_set3.jpg" alt="Satin Caress Duvet">
-    </div>
-  </section>
+    <section class="collection">
+      <h2>Silk Collection</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="img/silk1.png" alt="Midnight Whisper Set" />
+          <p>Midnight Whisper Set</p>
+        </div>
+        <div class="product-card">
+          <img src="img/silk2.png" alt="Pearl Mist Bedding" />
+          <p>Pearl Mist Bedding</p>
+        </div>
+        <div class="product-card">
+          <img src="img/silk3.png" alt="Satin Caress Duvet" />
+          <p>Satin Caress Duvet</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    &copy; 2025 UnionYiyi Bedding. All rights reserved.<br>
-    <small>For moments that linger after sleep.</small>
+    <section id="duvet" class="silk-section">
+      <h2>Duvet Covers</h2>
+      <p>Flowing elegance that embraces you softly—duvet covers that breathe with your skin, and whisper of better nights.</p>
+    </section>
+
+    <section id="quilt" class="silk-section">
+      <h2>Quilt Covers</h2>
+      <p>Quilted silk that slides like a secret over your skin. Hushed beauty that holds the warmth of every touch.</p>
+    </section>
+
+    <section id="sheets" class="silk-section">
+      <h2>Sheet Sets</h2>
+      <p>Sink into ultimate smoothness. These sheets aren’t just soft—they’re sensual, inviting, and endlessly indulgent.</p>
+    </section>
+  </main>
+
+  <footer class="philosophy-footer">
+    <p>Silk, where passion lingers in silence. For those who seek more than sleep.</p>
   </footer>
 
 </body>

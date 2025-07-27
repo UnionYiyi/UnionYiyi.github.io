@@ -49,20 +49,26 @@
       text-decoration: underline;
     }
 
-    .hero {
+    .hero-banner {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #fdfaf6, #e9e4dc);
+      color: #3e3e3e;
+      padding: 40px;
     }
 
-    .hero h2 {
-      font-size: 48px;
-      margin-bottom: 16px;
-      color: #5b4b3a;
+    .hero-text h1 {
+      font-size: 3.5em;
+      font-family: 'Georgia', serif;
+      margin-bottom: 20px;
     }
 
-    .hero p {
-      font-size: 18px;
-      color: #666;
+    .hero-text p {
+      font-size: 1.4em;
+      color: #6a6a6a;
     }
 
     .grid {
@@ -102,48 +108,18 @@
         font-size: 14px;
       }
 
-      .hero h2 {
-        font-size: 36px;
+      .hero-text h1 {
+        font-size: 2.5em;
       }
-    }
-  </style>
-</head>
-  <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UnionYiyi</title>
-  <style>
-    /* 以下是 hero banner 的样式 */
-    .hero-banner {
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, #fdfaf6, #e9e4dc);
-      color: #3e3e3e;
-      padding: 40px;
-    }
-    .hero-text h1 {
-      font-size: 3.5em;
-      font-family: 'Georgia', serif;
-      margin-bottom: 20px;
-    }
 
-    .hero-text p {
-      font-size: 1.4em;
-      color: #6a6a6a;
+      .hero-text p {
+        font-size: 1.1em;
+      }
     }
   </style>
 </head>
 
 <body>
-  <section class="hero-banner">
-  <div class="hero-text">
-    <h1>Rest your soul</h1>
-    <p>Softness. Stillness. A space of your own.</p>
-  </div>
-</section>
   <header>
     <h1>UnionYiyi</h1>
     <nav>
@@ -156,10 +132,12 @@
     </nav>
   </header>
 
-  <div class="hero">
-    <h2>Rest your soul</h2>
-    <p>Nature-inspired bedding made from the finest cotton, linen, and silk — crafted for comfort and calm.</p>
-  </div>
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1>Rest your soul</h1>
+      <p>Softness. Stillness. A space of your own.</p>
+    </div>
+  </section>
 
   <div class="grid">
     <div class="grid-item">

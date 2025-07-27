@@ -3,80 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Philosophy | UnionYiyi Bedding</title>
+  <title>Sleep Philosophy | UnionYiyi</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
     :root {
       --gold: #c5a063;
       --deep: #443322;
-      --light: #f8f1e5;
+      --soft: #f8f1e5;
+      --silk-white: #fcf9f5;
     }
 
     body {
       margin: 0;
-      font-family: "Noto Serif", serif;
-      background: white;
+      font-family: 'Noto Serif', serif;
+      background: var(--silk-white);
       color: var(--deep);
     }
 
     header {
+      background: white;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: white;
     }
 
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       color: var(--deep);
       font-weight: bold;
     }
 
     .philosophy-hero {
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+                  url("images/silk-philosophy-hero.jpg") center/cover no-repeat;
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url("images/silk-bedroom-calm.jpg") center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       color: white;
+      position: relative;
     }
 
-    .philosophy-hero h1 {
-      font-size: 4em;
+    .flowing-fabric {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("images/silk-drapes.png") repeat-x;
+      opacity: 0.08;
+      animation: silkMove 40s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes silkMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 2000px 0; }
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.8em;
       margin-bottom: 20px;
-      text-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      letter-spacing: 1.5px;
     }
 
-    .philosophy-hero p {
+    .hero-text p {
       font-size: 1.3em;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      line-height: 1.7;
+      color: #f8f8f8;
     }
 
     .philosophy-section {
-      max-width: 1000px;
-      margin: 80px auto;
+      max-width: 1100px;
+      margin: 100px auto;
       padding: 0 30px;
+      text-align: center;
+    }
+
+    .philosophy-section h2 {
+      font-size: 2.4em;
+      margin-bottom: 40px;
+      color: var(--gold);
     }
 
     .philosophy-section p {
-      font-size: 1.2em;
-      line-height: 2;
-      margin-bottom: 60px;
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: var(--deep);
+      max-width: 750px;
+      margin: 20px auto;
+    }
+
+    .product-showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .product-card {
+      border-radius: 14px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
+
+    .product-img {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .product-text {
+      padding: 25px;
+    }
+
+    .product-text h3 {
+      font-size: 1.6em;
+      color: var(--gold);
+      margin-bottom: 15px;
+    }
+
+    .product-text p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: #f3ede2;
       color: var(--deep);
     }
 
-    .philosophy-footer {
-      text-align: center;
-      font-size: 1.1em;
-      color: var(--gold);
-      background: #f8f1e5;
-      padding: 60px 20px;
+    footer small {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.95em;
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -89,34 +165,60 @@
       <a href="cotton.html">Cloud Cotton</a>
       <a href="linen.html">Sky Linen</a>
       <a href="silk.html">Whisper Silk</a>
-      <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Philosophy</a>
+      <a href="collections.html">Eastern Dreams</a>
+      <a href="brand-philosophy.html">Sleep Philosophy</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="philosophy-hero">
-    <div>
-      <h1>Where Silence Touches Sleep</h1>
-      <p>Touch that remembers before dreams begin.</p>
+    <div class="flowing-fabric"></div>
+    <div class="hero-text">
+      <h1>Touch That Remembers<br>Before Dreams Begin</h1>
+      <p>Each thread carries a breath, each breath returns to stillness — this is how the night embraces you.</p>
     </div>
   </div>
 
-  <div class="philosophy-section">
-    <p>
-      Sleep begins not with the body, but with feeling — the moment your skin meets fabric that knows how to listen. Our bedding is shaped by centuries of calm, made not to impress, but to invite. No noise. Just closeness.
-    </p>
-    <p>
-      In every thread, there’s rhythm. In every fold, a breath. The cotton carries care, the linen holds freedom, and the silk flows like memory. Together, they don’t decorate a bed — they create a pause the day forgot to give.
-    </p>
-    <p>
-      We believe softness isn’t luxury. It’s trust. When you lie down, we want the fabric to remember you. To stay close, to stay kind, to remind your body of what intimacy feels like — without needing a word.
-    </p>
+  <section class="philosophy-section">
+    <h2>Our Sleep Philosophy</h2>
+    <p>We believe sleep is not a pause, but a return — to warmth, to breath, to the body’s quiet rhythm.  
+    A bed is more than a place to rest; it is a space to reconnect with softness, silence, and self.</p>
+
+    <p>In every fabric we choose and every detail we weave, we follow the principle of presence — not perfection.  
+    The feeling of being held. The hush before the dream. The silk between moments.  
+    This is the philosophy we live by.</p>
+  </section>
+
+  <div class="product-showcase">
+    <div class="product-card">
+      <div class="product-img" style="background-image: url('images/soft-cotton.jpg');"></div>
+      <div class="product-text">
+        <h3>Cloud Cotton</h3>
+        <p>Gentle and grounded, this cotton wraps you with care, like a memory of someone waiting by the window.</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background-image: url('images/breathing-linen.jpg');"></div>
+      <div class="product-text">
+        <h3>Sky Linen</h3>
+        <p>A breeze between dreams. This linen breathes with you through long summers and quiet mornings.</p>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-img" style="background-image: url('images/whisper-silk.jpg');"></div>
+      <div class="product-text">
+        <h3>Whisper Silk</h3>
+        <p>Light glides across it, warmth lingers within. This silk listens more than it speaks — and stays close.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="philosophy-footer">
-    Sleep is not escape. It's return.
-  </div>
+  <footer>
+    &copy; 2025 UnionYiyi. All rights reserved.
+    <small>Sleep is not an escape. It’s a return.</small>
+  </footer>
 
 </body>
 </html>

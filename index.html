@@ -1,163 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="css/style.css">
-  <title>UnionYiyi</title>
+  <meta charset="utf-8">
+  <title>UnionYiyi — Rest. Renew. Rise. | Bedding Sets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UnionYiyi crafts mindful bedding: Cotton, Linen, Silk. Rest your body, renew your energy. Worldwide shipping.">
+  <link rel="canonical" href="https://unionyiyi.github.io/">
+
+  <meta property="og:title" content="UnionYiyi — Rest. Renew. Rise.">
+  <meta property="og:description" content="Softness is strength. Explore Cotton / Linen / Silk. Worldwide shipping.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://unionyiyi.github.io/">
+  <meta property="og:locale" content="en_US">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    :root{--bg:#fafafa;--ink:#0c0c0c;--muted:#6b7280;--line:#e5e7eb;--brand:#111827;--pill:#f5f6f8}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    header{position:sticky;top:0;background:rgba(255,255,255,.7);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line);z-index:10}
+    .topbar{display:flex;justify-content:center;align-items:center;padding:8px 10px;font-size:13px;color:#374151}
+    .container{max-width:1100px;margin:0 auto;padding:0 5vw}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .nav a{color:var(--ink);text-decoration:none;margin-right:18px}
+    .controls{display:flex;gap:10px;align-items:center}
+    select{padding:8px 10px;border:1px solid var(--line);background:#fff;border-radius:999px}
 
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fefcf8;
-      color: #333;
-      padding-top: 80px;
-    }
+    .hero{padding:14vh 5vw 10vh;background:var(--bg)}
+    .hero-inner{max-width:980px;margin:0 auto}
+    .hero h1{font-size:clamp(28px,4.5vw,56px);line-height:1.15;margin:0 0 12px;color:var(--brand)}
+    .hero-sub{font-size:clamp(16px,1.6vw,20px);color:var(--muted);margin:0 0 26px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:999px;border:1px solid var(--line);text-decoration:none}
+    .btn-primary{background:#111827;color:#fff;border-color:#111827}
+    .btn-ghost{background:transparent;color:var(--brand);margin-left:8px}
 
-    header {
-      background-color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
-    }
+    .series{padding:6vh 5vw 8vh;border-top:1px solid var(--line)}
+    .grid{max-width:1100px;margin:0 auto;display:grid;gap:22px;grid-template-columns:repeat(3,1fr)}
+    .card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff;transition:transform .25s ease}
+    .card:hover{transform:translateY(-4px)}
+    .card a{display:block;color:inherit;text-decoration:none;padding:18px}
+    .ph{height:180px;background:linear-gradient(180deg,#f3f4f6,#e5e7eb);border-radius:12px}
+    .card h3{margin:14px 0 6px;font-size:20px;color:var(--brand)}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:15px;line-height:1.6}
+    .card-cta{font-size:14px}
 
-    header h1 {
-      font-size: 20px;
-      font-weight: 500;
-    }
+    .trust{margin:40px auto 10px;max-width:1000px}
+    .pills{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border:1px dashed var(--line);border-radius:999px;background:var(--pill);font-size:13px;color:#374151}
 
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
+    .size-guide{margin:40px auto 60px;max-width:1000px;border-top:1px solid var(--line);padding-top:18px}
+    table{width:100%;border-collapse:collapse;font-size:14px}
+    th,td{border:1px solid var(--line);padding:10px;text-align:center}
+    th{background:#f9fafb;color:#374151}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .hero-banner {
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, #fdfaf6, #e9e4dc);
-      color: #3e3e3e;
-      padding: 40px;
-    }
-
-    .hero-text h1 {
-      font-size: 3.5em;
-      font-family: 'Georgia', serif;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p {
-      font-size: 1.4em;
-      color: #6a6a6a;
-    }
-
-    .grid {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 40px 60px;
-    }
-
-    .grid-item {
-      flex: 1 1 300px;
-      max-width: 400px;
-      text-align: center;
-    }
-
-    .grid-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .grid-item img:hover {
-      transform: scale(1.02);
-    }
-
-    .grid-item p {
-      margin-top: 12px;
-      font-size: 16px;
-      color: #555;
-    }
-
-    @media (max-width: 768px) {
-      nav a {
-        margin-left: 12px;
-        font-size: 14px;
-      }
-
-      .hero-text h1 {
-        font-size: 2.5em;
-      }
-
-      .hero-text p {
-        font-size: 1.1em;
-      }
-    }
+    footer{border-top:1px solid var(--line);padding:18px 5vw;color:#6b7280;font-size:13px}
+    .foot-flex{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+    .pay{display:flex;gap:10px;align-items:center}
+    .pay span{border:1px solid var(--line);padding:6px 10px;border-radius:8px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr 1fr}}
+    @media (max-width:600px){.grid{grid-template-columns:1fr}}
   </style>
 </head>
-
 <body>
+  <div class="topbar" id="shipBanner">Free shipping to US/UK/EU on orders over $99</div>
+
   <header>
-    <h1>UnionYiyi</h1>
-    <nav>
-      <a href="cotton.html">Cotton</a>
-      <a href="linen.html">Linen</a>
-      <a href="silk.html">Silk</a>
-      <a href="collections.html">Collections</a>
-      <a href="brand-philosophy.html">Our Philosophy</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav">
+      <div class="left">
+        <a href="/">UnionYiyi</a>
+        <a href="#collections">Collections</a>
+        <a href="#philosophy">Our Philosophy</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="controls">
+        <select id="ccySel" aria-label="Currency">
+          <option value="USD" selected>USD $</option>
+          <option value="EUR">EUR €</option>
+          <option value="GBP">GBP £</option>
+        </select>
+      </div>
+    </div>
   </header>
 
-  <section class="hero-banner">
-    <div class="hero-text">
-      <h1>Rest your soul</h1>
-      <p>Softness. Stillness. A space of your own.</p>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Rest your body. Recharge your energy.</h1>
+      <p class="hero-sub">Softness is not surrender — it’s strength. Wake to calm mornings and clear thoughts.</p>
+      <a class="btn btn-primary" href="#collections">☁️ Explore the Cotton Collection</a>
+      <a class="btn btn-ghost" href="#philosophy">Learn our philosophy</a>
     </div>
   </section>
 
-  <div class="grid">
-    <div class="grid-item">
-      <a href="cotton.html">
-        <img src="images/cotton.jpg" alt="Cotton">
-        <p>Cotton</p>
-      </a>
+  <section class="series" id="collections">
+    <div class="grid">
+      <article class="card">
+        <a href="/cotton.html">
+          <div class="ph" aria-hidden="true"></div>
+          <h3>Cloud Cotton</h3>
+          <p>Light, breathable, endlessly soft. For deeper sleep and lighter mornings.</p>
+          <span class="card-cta">Enter collection →</span>
+        </a>
+      </article>
+      <article class="card">
+        <a href="/linen.html">
+          <div class="ph" aria-hidden="true"></div>
+          <h3>Sky Linen</h3>
+          <p>Airy and cool with a natural texture. Feels better with every wash.</p>
+          <span class="card-cta">Enter collection →</span>
+        </a>
+      </article>
+      <article class="card">
+        <a href="/silk.html">
+          <div class="ph" aria-hidden="true"></div>
+          <h3>Whisper Silk</h3>
+          <p>A gentle glide against the skin. Subtle sheen, quiet luxury.</p>
+          <span class="card-cta">Enter collection →</span>
+        </a>
+      </article>
     </div>
-    <div class="grid-item">
-      <a href="linen.html">
-        <img src="images/linen.jpg" alt="Linen">
-        <p>Linen</p>
-      </a>
+
+    <div class="trust">
+      <div class="pills">
+        <span class="pill">Worldwide shipping</span>
+        <span class="pill">All sales are final</span>
+        <span class="pill">Natural fibers & safe dyes</span>
+        <span class="pill">Care guide included</span>
+      </div>
     </div>
-    <div class="grid-item">
-      <a href="silk.html">
-        <img src="images/silk.jpg" alt="Silk">
-        <p>Silk</p>
-      </a>
+  </section>
+
+  <section class="size-guide">
+    <div class="container">
+      <h2>Size Guide</h2>
+      <table>
+        <thead>
+          <tr><th>Type</th><th>US (in)</th><th>EU (cm)</th><th>UK (in)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Twin / Single</td><td>66×90</td><td>168×229</td><td>53×79</td></tr>
+          <tr><td>Full / Double</td><td>80×90</td><td>203×229</td><td>79×79</td></tr>
+          <tr><td>Queen</td><td>90×90</td><td>229×229</td><td>90×86</td></tr>
+          <tr><td>King</td><td>104×90</td><td>264×229</td><td>102×86</td></tr>
+        </tbody>
+      </table>
+      <p style="color:#6b7280;font-size:13px;margin-top:8px">Measurements are approximate. Please check product pages for exact specs.</p>
     </div>
-  </div>
+  </section>
+
+  <section class="series" id="philosophy">
+    <div class="container">
+      <h2>Our Philosophy</h2>
+      <p>At UnionYiyi, every piece is a quiet ritual of renewal. We choose natural fibers not for trend, but for their power to heal. We design with simplicity, believing calm is the truest luxury.</p>
+      <p>Each touch says “I am cared for.” Each breath whispers “I am becoming new.”</p>
+    </div>
+  </section>
+
+  <section class="series" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>For orders & wholesale, email: <a href="mailto:hello@unionyiyi.com">hello@unionyiyi.com</a></p>
+      <p>We accept cards via Stripe. VAT/GST shown at checkout where applicable.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-flex">
+      <div>© <span id="y"></span> UnionYiyi · <a href="/returns.html">Returns</a> · <a href="/privacy.html">Privacy</a></div>
+      <div class="pay"><span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>Google Pay</span></div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+    // Currency formatting for prices (place data-price-usd on elements to auto-format)
+    const ccySel = document.getElementById('ccySel');
+    function applyCurrency(){
+      const ccy = ccySel.value;
+      const rate = {USD:1, EUR:0.92, GBP:0.78}; // demo rates
+      document.querySelectorAll('[data-price-usd]').forEach(el=>{
+        const usd = parseFloat(el.getAttribute('data-price-usd')||'0');
+        const val = usd * (rate[ccy]||1);
+        el.textContent = new Intl.NumberFormat(
+          ccy==='EUR'?'de-DE':ccy==='GBP'?'en-GB':'en-US',
+          {style:'currency',currency:ccy}
+        ).format(val);
+      });
+    }
+    ccySel.addEventListener('change', applyCurrency);
+    applyCurrency();
+  </script>
 </body>
 </html>

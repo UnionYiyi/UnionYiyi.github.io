@@ -17,79 +17,97 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ---------- THEMES (pick via body class) ---------- */
+    /* ---------- THEME: cotton (warm palette) ---------- */
     .theme-cotton{
-  --gold:#c5a063;
-  --deep:#443322;
-  --light:#fdf7ef;
-  --muted:#7a6f64;
-  --line:#e8ded2;
-  --surface:#fffcf7;
-}
+      --gold:#c5a063;
+      --deep:#443322;
+      --light:#fdf7ef;
+      --muted:#7a6f64;
+      --line:#e8ded2;
+      --surface:#fffcf7;
+    }
+    .theme-cotton body{ background:var(--light); color:var(--deep); }
+    .theme-cotton .topnote{
+      background:linear-gradient(180deg,#fff7ecb3,#fff1e6a0);
+      color:var(--muted);
+      border-bottom:1px solid var(--line);
+    }
+    .theme-cotton .nav{ border-bottom:1px solid var(--line); }
+    .theme-cotton .brand{ color:var(--deep); }
+    .theme-cotton .navlinks{ color:var(--muted); }
+    .theme-cotton .navlinks a:hover{ color:var(--deep); }
+    .theme-cotton .hero{
+      background:
+        radial-gradient(60% 40% at 20% 0%, rgba(197,160,99,.06), transparent 60%),
+        linear-gradient(180deg, rgba(68,51,34,0) 0%, rgba(68,51,34,.05) 100%);
+      border-bottom:1px solid var(--line);
+    }
+    .theme-cotton .hero h1{ color:var(--deep); }
+    .theme-cotton .hero p{ color:var(--muted); }
+    .theme-cotton .ph{
+      background:
+        radial-gradient(140% 60% at -10% -10%, rgba(255,255,255,.85), transparent 60%),
+        linear-gradient(180deg,#f4eee6,#eae0d6);
+    }
+    .theme-cotton .figure img{
+      filter:grayscale(4%) saturate(96%) contrast(102%) hue-rotate(-6deg);
+    }
+    .theme-cotton .caption .title{ color:var(--deep); }
+    .theme-cotton .caption .note{ color:var(--muted); }
+    .theme-cotton .philosophy,
+    .theme-cotton .size-guide{ border-top:1px solid var(--line); }
+    .theme-cotton .philosophy p{ color:var(--deep); }
+    .theme-cotton .size-guide h3{ color:var(--muted); }
+    .theme-cotton .size div{ border-bottom:1px dashed var(--line); }
+    .theme-cotton footer{
+      background:#f6f1e5;
+      color:var(--deep);
+      border-top:1px solid var(--line);
+    }
+    .theme-cotton footer .small{ color:var(--muted); }
 
-.theme-cotton body{ background:var(--light); color:var(--deep); }
-
-.theme-cotton .topnote{
-  background:linear-gradient(180deg,#fff7ecb3,#fff1e6a0);
-  color:var(--muted);
-  border-bottom:1px solid var(--line);
-}
-.theme-cotton .nav{ border-bottom:1px solid var(--line); }
-.theme-cotton .brand{ color:var(--deep); }
-.theme-cotton .navlinks{ color:var(--muted); }
-.theme-cotton .navlinks a:hover{ color:var(--deep); }
-
-.theme-cotton .hero{
-  background:
-    radial-gradient(60% 40% at 20% 0%, rgba(197,160,99,.06), transparent 60%),
-    linear-gradient(180deg, rgba(68,51,34,0) 0%, rgba(68,51,34,.05) 100%);
-  border-bottom:1px solid var(--line);
-}
-.theme-cotton .hero h1{ color:var(--deep); }
-.theme-cotton .hero p{ color:var(--muted); }
-
-.theme-cotton .ph{
-  background:
-    radial-gradient(140% 60% at -10% -10%, rgba(255,255,255,.85), transparent 60%),
-    linear-gradient(180deg,#f4eee6,#eae0d6);
-}
-.theme-cotton .figure img{
-  filter:grayscale(4%) saturate(96%) contrast(102%) hue-rotate(-6deg);
-}
-.theme-cotton .caption .title{ color:var(--deep); }
-.theme-cotton .caption .note{ color:var(--muted); }
-
-.theme-cotton .philosophy,
-.theme-cotton .size-guide{ border-top:1px solid var(--line); }
-.theme-cotton .philosophy p{ color:var(--deep); }
-.theme-cotton .size-guide h3{ color:var(--muted); }
-.theme-cotton .size div{ border-bottom:1px dashed var(--line); }
-
-.theme-cotton footer{
-  background:#f6f1e5;
-  color:var(--deep);
-  border-top:1px solid var(--line);
-}
-.theme-cotton footer .small{ color:var(--muted); }
+    /* ---------- Layout ---------- */
+    *{ box-sizing:border-box }
+    html,body{ margin:0; padding:0 }
+    body{
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .display{ font-family:Newsreader, serif; letter-spacing:-.01em; }
     .container{ max-width:1200px; margin:0 auto; padding:0 6vw }
 
-    /* ---------- Top note (shipping / policy) ---------- */
+    /* Top note */
     .topnote{
       font-size:12px; color:var(--muted); text-align:center;
       padding:10px 6vw; border-bottom:1px solid var(--line);
     }
 
-    /* ---------- Nav ---------- */
+    /* Nav */
     .nav{
       display:flex; align-items:center; justify-content:space-between;
       padding:14px 6vw; border-bottom:1px solid var(--line);
+      background: var(--light);
     }
     .brand{ font-weight:600; letter-spacing:.02em }
     .navlinks{ display:flex; gap:18px; color:var(--muted) }
-    .navlinks a{ opacity:.9 }
-    .navlinks a:hover{ opacity:1 }
 
-    /* ---------- HERO (editorial) ---------- */
+    /* Elegant links (remove blue/underline) */
+    a, a:visited{
+      color: var(--deep);
+      text-decoration: none;
+      transition: color .2s ease, opacity .2s ease;
+    }
+    a:hover{ opacity:.7; }
+    .navlinks a{
+      font-weight:500; letter-spacing:.02em; margin:0 12px; color:var(--deep);
+    }
+    .navlinks a:hover{ color:var(--gold); opacity:1; }
+    .link-row{ display:flex; gap:18px; flex-wrap:wrap }
+    .link-row a{
+      color:var(--deep); font-weight:500; border-bottom:1px solid transparent; padding-bottom:3px; transition:all .25s ease;
+    }
+    .link-row a:hover{ border-bottom:1px solid var(--gold); color:var(--gold); }
+
+    /* Hero */
     .hero{
       padding:16vh 6vw 10vh;
       border-bottom:1px solid var(--line);
@@ -97,70 +115,41 @@
     }
     .hero h1{ font-size:clamp(40px,8vw,84px); line-height:1.02; margin:0 0 12px }
     .hero p{ font-size:clamp(16px,2vw,20px); color:var(--muted); max-width:760px; margin:0 0 20px }
-    .link-row{ display:flex; gap:18px; flex-wrap:wrap }
-    .link-row a{ padding:6px 0 }
 
-    /* ---------- GALLERY (masonry-like) ---------- */
+    /* Gallery */
     .gallery{ padding:8vh 0 }
     .gallery h2{ font-size:18px; color:var(--muted); margin:0 0 18px; padding:0 6vw }
-    .grid{
-      columns: 3 320px; column-gap:22px;
-      padding:0 6vw;
-    }
-    .figure{
-      break-inside:avoid; margin:0 0 22px; background:var(--surface);
-    }
-    .figure img{
-      width:100%; display:block; aspect-ratio:4/5; object-fit:cover;
-      filter:grayscale(6%) saturate(94%) contrast(102%);
-    }
-    /* graceful gradient placeholder for missing images */
-    .ph{
-      width:100%; aspect-ratio:4/5; display:block; background:
-        radial-gradient(140% 60% at -10% -10%, rgba(255,255,255,.85), transparent 60%),
-        linear-gradient(180deg,#f2f3f6,#e8eaee);
+    .grid{ columns:3 320px; column-gap:22px; padding:0 6vw; }
+    .figure{ break-inside:avoid; margin:0 0 22px; background:var(--surface); }
+    .figure img{ width:100%; display:block; aspect-ratio:4/5; object-fit:cover; filter:grayscale(6%) saturate(94%) contrast(102%); }
+    .ph{ width:100%; aspect-ratio:4/5; display:block; background:
+      radial-gradient(140% 60% at -10% -10%, rgba(255,255,255,.85), transparent 60%),
+      linear-gradient(180deg,#f2f3f6,#e8eaee);
     }
     .caption{ padding:10px 2px 2px }
     .caption .title{ font-weight:600 }
     .caption .note{ color:var(--muted); font-size:13px; margin-top:4px }
 
-    /* ---------- Philosophy (poetic) ---------- */
-    .philosophy{
-      padding:6vh 6vw 10vh; border-top:1px solid var(--line);
-    }
+    /* Philosophy */
+    .philosophy{ padding:6vh 6vw 10vh; border-top:1px solid var(--line); }
     .philosophy p{ font-family:Newsreader, serif; font-size:22px; line-height:1.7; max-width:820px; margin:0 0 18px }
 
-    /* ---------- Size (annotative) ---------- */
+    /* Size */
     .size-guide{ padding:4vh 6vw 8vh; border-top:1px solid var(--line) }
     .size-guide h3{ font-size:14px; color:var(--muted); margin:0 0 8px; letter-spacing:.08em; text-transform:uppercase }
     .size{ display:grid; grid-template-columns:repeat(4,minmax(120px,1fr)); gap:10px; max-width:860px }
     .size div{ padding:10px 0; border-bottom:1px dashed var(--line) }
 
-    /* ---------- Footer ---------- */
+    /* Footer */
     footer{ padding:40px 6vw 24px; color:var(--muted); border-top:1px solid var(--line) }
     .footflex{ display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap }
     .small{ font-size:14px; color:var(--muted) }
-
-    /* ---------- Tiny theme switch (can be removed after launch) ---------- */
-    .switcher{
-      position:fixed; right:16px; bottom:16px; font-size:12px; color:var(--muted);
-      background:var(--surface); border:1px solid var(--line); border-radius:999px; padding:6px 10px;
-    }
-    .switcher a{ margin:0 6px; text-decoration:none; opacity:.85 }
-    .switcher a:hover{ opacity:1 }
-
-    @media (max-width:640px){
-      .size{ grid-template-columns:repeat(2,minmax(120px,1fr)) }
-    }
   </style>
 </head>
 
-<!-- Default to Moonmilk theme -->
 <body class="theme-cotton">
-  <!-- Top shipping/policy note -->
   <div class="topnote">Worldwide shipping · All sales are final</div>
 
-  <!-- Minimal nav -->
   <nav class="nav">
     <div class="brand">UnionYiyi</div>
     <div class="navlinks">
@@ -171,26 +160,24 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container">
       <h1 class="display">Rest your body.<br>Let beauty do the quiet work.</h1>
       <p>Softness is strength. A room of one’s own. Sheets that breathe, colors that listen.</p>
       <div class="link-row">
-        <a class="link" href="/cotton.html">Cloud Cotton</a>
-        <a class="link" href="/linen.html">Sky Linen</a>
-        <a class="link" href="/silk.html">Whisper Silk</a>
+        <a href="/cotton.html">Cloud Cotton</a>
+        <a href="/linen.html">Sky Linen</a>
+        <a href="/silk.html">Whisper Silk</a>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section class="gallery" id="collections">
     <h2>Collections</h2>
     <div class="grid">
-      <!-- Replace src with your photos; the .ph div is a graceful placeholder if you don't have images yet -->
       <figure class="figure">
-        <img class="ph" src="/images/cotton/01.jpg" alt="Cloud Cotton — morning light" onerror="this.classList.remove('ph'); this.removeAttribute('src');" />
+        <img class="ph" src="/images/cotton/01.jpg" alt="Cloud Cotton — morning light" loading="lazy"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}));" />
         <figcaption class="caption">
           <div class="title">Cloud Cotton</div>
           <div class="note">Morning light, breathable and soft.</div>
@@ -198,7 +185,8 @@
       </figure>
 
       <figure class="figure">
-        <img class="ph" src="/images/linen/01.jpg" alt="Sky Linen — quiet afternoon" onerror="this.classList.remove('ph'); this.removeAttribute('src');" />
+        <img class="ph" src="/images/linen/01.jpg" alt="Sky Linen — quiet afternoon" loading="lazy"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}));" />
         <figcaption class="caption">
           <div class="title">Sky Linen</div>
           <div class="note">Cool to the touch. Ages beautifully.</div>
@@ -206,16 +194,17 @@
       </figure>
 
       <figure class="figure">
-        <img class="ph" src="/images/silk/01.jpg" alt="Whisper Silk — dusk" onerror="this.classList.remove('ph'); this.removeAttribute('src');" />
+        <img class="ph" src="/images/silk/01.jpg" alt="Whisper Silk — dusk" loading="lazy"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}));" />
         <figcaption class="caption">
           <div class="title">Whisper Silk</div>
           <div class="note">A gentle sheen. Almost a whisper.</div>
         </figcaption>
       </figure>
 
-      <!-- Add more figures for a richer flow; different aspect ratios are OK -->
       <figure class="figure">
-        <img class="ph" src="/images/cotton/02.jpg" alt="Cloud Cotton — folds" onerror="this.classList.remove('ph'); this.removeAttribute('src');" />
+        <img class="ph" src="/images/cotton/02.jpg" alt="Cloud Cotton — folds" loading="lazy"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}));" />
         <figcaption class="caption">
           <div class="title">Cloud Cotton</div>
           <div class="note">Folds, breath, and quiet mornings.</div>
@@ -223,7 +212,8 @@
       </figure>
 
       <figure class="figure">
-        <img class="ph" src="/images/linen/02.jpg" alt="Sky Linen — texture" onerror="this.classList.remove('ph'); this.removeAttribute('src');" />
+        <img class="ph" src="/images/linen/02.jpg" alt="Sky Linen — texture" loading="lazy"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}));" />
         <figcaption class="caption">
           <div class="title">Sky Linen</div>
           <div class="note">Texture that listens to the season.</div>
@@ -231,7 +221,8 @@
       </figure>
 
       <figure class="figure">
-        <img class="ph" src="/images/silk/02.jpg" alt="Whisper Silk — skin-close" onerror="this.classList.remove('ph'); this.removeAttribute('src');" />
+        <img class="ph" src="/images/silk/02.jpg" alt="Whisper Silk — skin-close" loading="lazy"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'ph'}));" />
         <figcaption class="caption">
           <div class="title">Whisper Silk</div>
           <div class="note">Skin-close, a quiet glow.</div>
@@ -240,7 +231,6 @@
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
   <section class="philosophy" id="philosophy">
     <div class="container">
       <p>
@@ -252,7 +242,6 @@
     </div>
   </section>
 
-  <!-- SIZE (annotative) -->
   <section class="size-guide">
     <div class="container">
       <h3>Size Guide</h3>
@@ -265,36 +254,20 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="switcher" aria-label="Theme">
-  <span>Theme:</span>
-  <a href="#" onclick="setTheme('theme-inkstone');return false;">Inkstone</a> ·
-  <a href="#" onclick="setTheme('theme-moonmilk');return false;">Moonmilk</a> ·
-  <a href="#" onclick="setTheme('theme-oolong');return false;">Oolong</a>
-</div>
+    <div class="container footflex">
+      <div>© <span id="y"></span> UnionYiyi · <a href="/returns.html">Returns</a></div>
+      <div class="small">Worldwide shipping · All sales are final</div>
+    </div>
   </footer>
-
-  <!-- Tiny theme switcher (remove if not needed) -->
-  <div class="switcher" aria-label="Theme">
-    <span>Theme:</span>
-    <a href="#" onclick="setTheme('theme-inkstone');return false;">Inkstone</a> ·
-    <a href="#" onclick="setTheme('theme-moonmilk');return false;">Moonmilk</a> ·
-    <a href="#" onclick="setTheme('theme-oolong');return false;">Oolong</a>
-  </div>
 
   <script>
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Theme switch (persist)
-    function setTheme(name){
-  document.body.classList.remove('theme-inkstone','theme-moonmilk','theme-oolong');
-  document.body.classList.add(name);
-  localStorage.setItem('uy-theme', name);
-}
+    // Theme init (fixed to cotton)
     (function(){
-      const saved = localStorage.getItem('uy-theme') || 'theme-moonmilk';
+      const saved = localStorage.getItem('uy-theme') || 'theme-cotton';
       document.body.classList.add(saved);
     })();
   </script>

@@ -289,10 +289,10 @@
 
     // Theme switch (persist)
     function setTheme(name){
-      document.body.classList.remove('theme-inkstone','theme-moonmilk','theme-oolong');
-      document.body.classList.add(name);
-      localStorage.setItem('uy-theme', name);
-    }
+  document.body.classList.remove('theme-inkstone','theme-moonmilk','theme-oolong');
+  document.body.classList.add(name);
+  localStorage.setItem('uy-theme', name);
+}
     (function(){
       const saved = localStorage.getItem('uy-theme') || 'theme-moonmilk';
       document.body.classList.add(saved);
